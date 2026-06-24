@@ -4,6 +4,8 @@ Use this guide when an agent tool does not support Codex Skills directly.
 
 You can paste it into a project instruction file, custom agent prompt, Cursor rule, Claude Code project note, Hermes Agent instruction, OpenClaw workflow, or any other agent system that can read repository guidance.
 
+This guide is plain Markdown on purpose. It does not depend on Codex Skill metadata, `$paper-operators` syntax, MCP tools, a specific image model, or any particular agent runtime.
+
 ## Mission
 
 Turn article ideas into clear, tactile, paper-stage illustrations.
@@ -44,6 +46,8 @@ paper operator:
 8. Build a high-angle paper-model scene with readable labels.
 9. Generate or plan one image at a time.
 10. Check the output against the QA rules below.
+
+If the current agent cannot generate images, stop at the final image prompt and clearly say which image model or renderer should receive it.
 
 ## Visual DNA
 
@@ -89,7 +93,9 @@ final image prompt:
 QA risks:
 ```
 
-For generation, produce one image at a time and report:
+For prompt-only agents, return the same planning block plus a final renderer prompt.
+
+For agents with image generation, produce one image at a time and report:
 
 ```text
 image path:
@@ -97,6 +103,25 @@ intended placement:
 one-line purpose:
 QA result:
 ```
+
+## Renderer Handoff
+
+When another tool will render the image, pass this compact handoff:
+
+```text
+renderer task:
+- aspect ratio: 16:9 horizontal
+- source anchor:
+- reader takeaway:
+- paper operator action:
+- scene:
+- labels:
+- style DNA:
+- forbidden drift:
+- final prompt:
+```
+
+Prefer a strong image model for final rendering. Weaker models can still use the workflow, but should reduce text density, use fewer labels, or leave blank label containers for post-production typography.
 
 ## QA Rules
 

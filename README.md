@@ -173,6 +173,10 @@ cp -R paper-operators ~/.codex/skills/paper-operators
 
 核心不是工具名，而是这条链路：`source anchor -> reader takeaway -> operator inclusion test -> domain adaptation -> final prompt -> QA`。
 
+Hermes Agent 和 OpenClaw 应该都可以使用这套方法：把 [`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md) 作为 workflow prompt / 项目级指令给它们即可。它们不需要识别 Codex Skill 格式，只要能遵循普通 Markdown 指令，就能完成文章分析、构图规划、标签设计和最终提示词输出。
+
+需要注意：跨 Agent 复用的是分析、构图和提示词工作流；最终成图质量仍取决于图像模型。Claude Code、Cursor、Hermes Agent、OpenClaw 可以负责规划和生成最终提示词；如果它们当前没有强生图能力，建议把 `final image prompt` 交给更强的图像模型渲染。具体兼容性见 [`agent-guides/compatibility.md`](agent-guides/compatibility.md)，也可以用 [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) 测试一个新 Agent 是否真的理解了这套工作流。
+
 ## 示例提示词
 
 规划一篇文章的图包：
@@ -241,9 +245,11 @@ paper-operators/
 │   └── wechat-official-account.png
 ├── agent-guides/
 │   ├── claude-code.md
+│   ├── compatibility.md
 │   ├── cursor-rule.mdc
 │   ├── README.md
-│   └── paper-operators-agent.md
+│   ├── paper-operators-agent.md
+│   └── smoke-test.md
 ├── examples/
 │   ├── prompts.md
 │   └── images/

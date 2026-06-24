@@ -182,6 +182,10 @@ Suggested mapping:
 
 The important chain is: `source anchor -> reader takeaway -> operator inclusion test -> domain adaptation -> final prompt -> QA`.
 
+Hermes Agent and OpenClaw should be able to use this method as long as they can read or paste ordinary project instructions. Give them [`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md) as a workflow prompt or project-level instruction. They do not need to understand the Codex Skill package format to perform article analysis, composition planning, label design, and final prompt generation.
+
+Important: what transfers across agents is the analysis, composition, and prompt workflow. Final image quality still depends on the image model. Claude Code, Cursor, Hermes Agent, and OpenClaw can plan the figure and produce the final renderer prompt; if they do not have a strong image model available, hand that prompt to a better renderer. See [`agent-guides/compatibility.md`](agent-guides/compatibility.md), and use [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) to check whether a new agent actually follows the workflow.
+
 ## Example Prompts
 
 Plan an article package:
@@ -251,9 +255,11 @@ paper-operators/
 │   └── wechat-official-account.png
 ├── agent-guides/
 │   ├── claude-code.md
+│   ├── compatibility.md
 │   ├── cursor-rule.mdc
 │   ├── README.md
-│   └── paper-operators-agent.md
+│   ├── paper-operators-agent.md
+│   └── smoke-test.md
 ├── examples/
 │   ├── prompts.md
 │   └── images/
