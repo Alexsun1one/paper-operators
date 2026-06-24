@@ -1,0 +1,7 @@
+interface:
+  display_name: "Paper Operators"
+  short_description: "中文优先的纸片人文章配图"
+  brand_color: "#2F6FD6"
+  default_prompt: "用 $paper-operators 把这篇文章或这个观点变成一张 16:9 纸片人正文配图：高空纸模视角、立体元素、流畅主线、可读中文标签，纸片人必须执行核心动作。"
+policy:
+  allow_implicit_invocation: true
