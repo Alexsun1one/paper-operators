@@ -9,7 +9,7 @@ Paper Operators is built for people who write, explain, publish, teach, ship pro
 It is not a mascot pack. It is a visual thinking tool.
 
 <p align="center">
-  <img src="examples/images/05-readable-chinese-route.png" alt="Paper Operators readable Chinese route example" width="100%">
+  <img src="examples/images/readme/06-materials-before-conclusion.jpg" alt="Lay out the material before drawing conclusions" width="100%">
 </p>
 
 ## What This Skill Does
@@ -27,29 +27,55 @@ The rule is simple: if removing the paper operator does not weaken the image, th
 <table>
   <tr>
     <td width="50%">
-      <img src="examples/images/01-aerial-paper-stage-hero.png" alt="High-angle paper stage" width="100%">
+      <img src="examples/images/readme/01-readable-chinese-route.jpg" alt="Readable Chinese route" width="100%">
       <br>
-      <sub><strong>High-angle paper stage.</strong> Good for systems, products, routes, cities, and multi-object scenes.</sub>
+      <sub><strong>Readable Chinese route.</strong> Claim, relation, state, text, and outcome unfold along one path.</sub>
     </td>
     <td width="50%">
-      <img src="examples/images/02-art-attention-frame.png" alt="Art attention frame" width="100%">
+      <img src="examples/images/readme/02-aerial-paper-stage-hero.jpg" alt="High-angle paper stage" width="100%">
       <br>
-      <sub><strong>Art and attention.</strong> Paper operators become frame setters, light catchers, and color tuners.</sub>
+      <sub><strong>High-angle paper stage.</strong> Good for systems, products, routes, cities, and multi-object scenes.</sub>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <img src="examples/images/03-life-boundary-room.png" alt="Life boundary room" width="100%">
+      <img src="examples/images/readme/03-art-attention-frame.jpg" alt="Art attention frame" width="100%">
+      <br>
+      <sub><strong>Art and attention.</strong> Paper operators become frame setters, light catchers, and color tuners.</sub>
+    </td>
+    <td width="50%">
+      <img src="examples/images/readme/04-life-boundary-room.jpg" alt="Life boundary room" width="100%">
       <br>
       <sub><strong>Life and psychology.</strong> Boundaries, care, memory, and emotional weather become rooms and paper objects.</sub>
     </td>
+  </tr>
+  <tr>
     <td width="50%">
-      <img src="examples/images/04-ai-town-systems.png" alt="AI town systems" width="100%">
+      <img src="examples/images/readme/05-ai-town-systems.jpg" alt="AI town systems" width="100%">
       <br>
       <sub><strong>Product, AI, and systems.</strong> Routes, teams, checkpoints, and evidence become a readable tabletop world.</sub>
     </td>
+    <td width="50%">
+      <img src="examples/images/readme/07-chat-copilot-agent.jpg" alt="From Q&A to delegated work" width="100%">
+      <br>
+      <sub><strong>From Q&A to delegated work.</strong> Chat, Copilot, and Agent differ by work loop, not by naming.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="examples/images/readme/08-agent-launch-six-forces.jpg" alt="Agent launch with six forces" width="100%">
+      <br>
+      <sub><strong>Agents entering the field.</strong> It is not one horse; models, context, tools, ecosystem, cost, and enterprise demand move together.</sub>
+    </td>
+    <td width="50%">
+      <img src="examples/images/readme/09-agent-service-results.jpg" alt="From old SaaS to agent service outcomes" width="100%">
+      <br>
+      <sub><strong>Agent service outcomes.</strong> The table shifts from using tools to buying results.</sub>
+    </td>
   </tr>
 </table>
+
+Note: the images shown in this README are compressed previews for faster GitHub loading. They do not represent the full sharpness of the generated originals. Earlier PNG examples remain in [`examples/images/`](examples/images/), while the new homepage examples live in `examples/images/readme/`.
 
 ## Why It Exists
 
@@ -202,6 +228,7 @@ paper-operators/
 ├── examples/
 │   ├── prompts.md
 │   └── images/
+│       └── readme/
 ├── docs/
 │   └── style-notes.md
 └── paper-operators/
