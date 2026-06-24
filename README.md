@@ -1,95 +1,88 @@
 # Paper Operators / 纸片人
 
-> A Chinese-first Codex Skill for turning article ideas into clear, tactile, paper-stage illustrations.
+> 一个中文优先的 Codex Skill：把文章里的判断、转折和复杂关系，变成清楚、好看、有动作感的纸片人正文配图。
 
-Paper Operators is built for people who write, explain, publish, teach, ship products, or make sense of complicated ideas. It turns an abstract sentence into a 16:9 article illustration where a small faceless paper person physically performs the core action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, or repairing.
+[English](README.en.md)
 
-It is not a mascot pack. It is a visual thinking tool.
+Paper Operators 面向写作者、产品人、研究者、教师、创作者，以及所有需要把复杂想法讲清楚的人。它不是一个「可爱小人」画风包，而是一套文章配图工作流：先读懂文章里真正值得画的那句话，再让无脸纸片人亲手完成关键动作。
+
+纸片人会装框、捕光、牵线、检视、开闸、照料、称重、归档、修补。它不是站在旁边卖萌，而是在图里把抽象概念做出来。
 
 <p align="center">
-  <img src="examples/images/05-readable-chinese-route.png" alt="Paper Operators readable Chinese route example" width="100%">
+  <img src="examples/images/05-readable-chinese-route.png" alt="Paper Operators 中文路线示例" width="100%">
 </p>
 
-## What This Skill Does
+## 它解决什么问题
 
-- Finds the sentence, conflict, turn, or judgment in an article that is worth visualizing.
-- Chooses a paper-world metaphor that matches the domain: art, culture, life, product, business, engineering, AI, education, or psychology.
-- Uses paper operators only when their action improves comprehension.
-- Produces readable Chinese or English labels by default, instead of empty label boxes.
-- Keeps a consistent visual language across a whole article package without making every image look the same.
+很多 AI 文章配图会掉进两个坑：要么好看但空泛，要么清楚但像 PPT。
 
-The rule is simple: if removing the paper operator does not weaken the image, the operator should not be there.
+Paper Operators 想要的是另一种状态：
 
-## Gallery
+- 读者三秒内知道这张图在讲什么
+- 画面有纸张、器具、路径和动作，不是冰冷图标
+- 中文标签默认可读，不再只给空白占位框
+- 同一篇文章里的多张图风格统一，但每张图又贴合自己的段落
+- 角色只在有用时出现，不能为了可爱而硬塞
+
+一句话判断：如果把纸片人拿掉，图还是同样清楚，那这张图就不该画纸片人。
+
+## 示例图
 
 <table>
   <tr>
     <td width="50%">
-      <img src="examples/images/01-aerial-paper-stage-hero.png" alt="High-angle paper stage" width="100%">
+      <img src="examples/images/01-aerial-paper-stage-hero.png" alt="高空纸模舞台" width="100%">
       <br>
-      <sub><strong>High-angle paper stage.</strong> Good for systems, products, routes, cities, and multi-object scenes.</sub>
+      <sub><strong>高空纸模舞台。</strong>适合系统、产品、城市、路线和多对象关系。</sub>
     </td>
     <td width="50%">
-      <img src="examples/images/02-art-attention-frame.png" alt="Art attention frame" width="100%">
+      <img src="examples/images/02-art-attention-frame.png" alt="艺术审美装框示例" width="100%">
       <br>
-      <sub><strong>Art and attention.</strong> Paper operators become frame setters, light catchers, and color tuners.</sub>
+      <sub><strong>艺术与审美。</strong>纸片人可以是装框员、捕光员、调色员，而不是工程流程图里的小工人。</sub>
     </td>
   </tr>
   <tr>
     <td width="50%">
-      <img src="examples/images/03-life-boundary-room.png" alt="Life boundary room" width="100%">
+      <img src="examples/images/03-life-boundary-room.png" alt="生活心理边界房间" width="100%">
       <br>
-      <sub><strong>Life and psychology.</strong> Boundaries, care, memory, and emotional weather become rooms and paper objects.</sub>
+      <sub><strong>生活与心理。</strong>边界、照料、记忆和情绪天气，可以变成房间、屏风、纸条和路径。</sub>
     </td>
     <td width="50%">
-      <img src="examples/images/04-ai-town-systems.png" alt="AI town systems" width="100%">
+      <img src="examples/images/04-ai-town-systems.png" alt="AI 系统小镇" width="100%">
       <br>
-      <sub><strong>Product, AI, and systems.</strong> Routes, teams, checkpoints, and evidence become a readable tabletop world.</sub>
+      <sub><strong>产品、AI 与系统。</strong>团队、校验、上线、证据和路线，可以被组织成一个可读的桌面世界。</sub>
     </td>
   </tr>
 </table>
 
-## Why It Exists
+## 适合谁
 
-Most AI-generated article images fail in one of two ways: they are pretty but vague, or they are clear but look like a slide deck.
+适合：
 
-Paper Operators tries to sit in the better middle:
+- 公众号、博客、newsletter、长文作者
+- 产品、AI、商业、工程、教育、研究类内容
+- 艺术评论、文化文章、个人经验、心理和生活类文章
+- 需要「有人在做这件事」而不是只有箭头和方框的解释图
+- 想为一篇文章生成一组统一但不单调的正文图
 
-- clear enough to explain the idea in three seconds
-- warm enough that readers want to keep looking
-- structured enough to support long-form writing
-- distinctive enough to make a publication feel owned
+不适合：
 
-The style borrows the discipline of diagrams, the warmth of paper craft, and the editorial restraint of a good magazine figure. It does not copy Xiaohei-style black figures, white-dot eyes, blob mascots, generic stick people, robots, stock icons, or PPT infographics.
+- 只需要 logo、贴纸、表情包或装饰性 mascot
+- 一张普通截图、表格或图表就能说清楚的内容
+- 纸片人只能站在旁边凑气氛，不能参与核心动作的场景
 
-## When To Use It
+## 工作流
 
-Use Paper Operators for:
+1. 从文章里找出最值得画的 source anchor：一句话、一个转折、一个冲突或一个判断。
+2. 写清楚读者看完图应该明白什么。
+3. 判断领域和语气：艺术、文化、生活、产品、商业、工程、教育、心理等。
+4. 选择纸片人的动作：装框、捕光、牵线、检视、开闸、照料、称重、归档、修补。
+5. 回答 `what breaks if removed`，确认纸片人不是装饰。
+6. 选择纸模世界：画廊工作台、边界房间、纸片小镇、档案桌、路线图、剖面图、货架矩阵等。
+7. 写出短而可读的中文标签。
+8. 生成一张图，并检查清晰度、动作、文字、构图和风格漂移。
 
-- WeChat articles, blogs, newsletters, and long-form essays
-- product thinking, AI workflows, business judgment, engineering notes
-- art criticism, cultural essays, personal writing, psychology, education
-- explainers that need more humanity than arrows and boxes
-- visual packages where several images should feel related
-
-Avoid it when:
-
-- the image only needs a logo, icon, sticker, or decorative mascot
-- a simple chart or screenshot would explain the point better
-- the operator would stand beside the idea instead of acting on it
-
-## How It Works
-
-1. Pick one source anchor from the article.
-2. Decide what the reader should understand after seeing the image.
-3. Choose the domain and mood.
-4. Select a paper operator family.
-5. Answer `what breaks if removed`.
-6. Choose a scene: gallery table, boundary room, paper town, archive desk, route map, cutaway, shelf matrix, or another paper-world setup.
-7. Add readable labels in the user's language.
-8. Generate one image, then check clarity, action, text, composition, and style drift.
-
-Planning output includes:
+规划输出通常长这样：
 
 ```text
 source anchor:
@@ -106,22 +99,22 @@ final image prompt:
 QA risks:
 ```
 
-## Install
+## 安装
 
-Copy the Skill directory into your Codex skills folder:
+把 Skill 目录复制到 Codex skills 目录：
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -R paper-operators ~/.codex/skills/paper-operators
 ```
 
-Restart Codex, then call it by name:
+重启 Codex 后即可使用：
 
 ```text
 用 $paper-operators 给这篇文章规划 3 张正文配图，先不要生成图。
 ```
 
-Or generate one image directly:
+也可以直接生成一张：
 
 ```text
 用 $paper-operators 根据下面这段文字生成一张 16:9 正文配图。
@@ -130,9 +123,9 @@ Or generate one image directly:
 好的审美不是装饰，而是把注意力放到正确的位置。
 ```
 
-## Example Prompts
+## 示例提示词
 
-Plan an article package:
+规划一篇文章的图包：
 
 ```text
 用 $paper-operators 给下面这篇文章规划 3 张正文配图，先不要生成图。
@@ -146,7 +139,7 @@ Plan an article package:
 {paste article}
 ```
 
-Generate a product or AI system image:
+生成产品 / AI 系统配图：
 
 ```text
 用 $paper-operators 生成一张产品/AI 系统配图。
@@ -160,7 +153,7 @@ Source anchor:
 - 必须出现短中文标签：想法、团队、校验、上线
 ```
 
-Generate an art essay image:
+生成艺术评论配图：
 
 ```text
 用 $paper-operators 生成一张艺术评论配图。
@@ -174,9 +167,9 @@ Source anchor:
 - 不要画成流程图、漏斗、节点网络
 ```
 
-More examples live in [`examples/prompts.md`](examples/prompts.md).
+更多示例见 [`examples/prompts.md`](examples/prompts.md)。
 
-## Follow The Work
+## 关注后续
 
 这个仓库放的是可复用的 Skill 和示例。更完整的拆解、提示词、文章配图复盘、AI 写作和产品实践，我会继续写在公众号里。
 
@@ -186,11 +179,12 @@ More examples live in [`examples/prompts.md`](examples/prompts.md).
   <img src="assets/wechat-official-account.png" alt="微信搜一搜：正在逐渐AI化" width="720">
 </p>
 
-## Repository
+## 仓库结构
 
 ```text
 paper-operators/
 ├── README.md
+├── README.en.md
 ├── LICENSE
 ├── NOTICE.md
 ├── assets/
@@ -207,14 +201,8 @@ paper-operators/
     └── assets/examples/
 ```
 
-The outer repository is for people reading the project. The inner `paper-operators/` directory is the actual Codex Skill.
+外层仓库给人读，内层 `paper-operators/` 是真正安装到 Codex 里的 Skill。
 
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
-
-## English Summary
-
-Paper Operators is a Codex Skill for generating article illustrations with faceless folded-paper action characters. It creates tactile paper-stage diagrams where a small paper figure physically performs the core idea: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, or repairing.
-
-Use it for Chinese or English article body images, blog illustrations, concept visuals, and explainer figures. Do not use it for generic mascots, stickers, Xiaohei-style black figures, stock infographic icons, or decorative AI art that does not help readers understand the article.

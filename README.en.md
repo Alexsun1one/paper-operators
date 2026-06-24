@@ -1,0 +1,218 @@
+# Paper Operators
+
+> A Chinese-first Codex Skill for turning article ideas into clear, tactile, paper-stage illustrations.
+
+[中文](README.md)
+
+Paper Operators is built for people who write, explain, publish, teach, ship products, or make sense of complicated ideas. It turns an abstract sentence into a 16:9 article illustration where a small faceless paper person physically performs the core action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, or repairing.
+
+It is not a mascot pack. It is a visual thinking tool.
+
+<p align="center">
+  <img src="examples/images/05-readable-chinese-route.png" alt="Paper Operators readable Chinese route example" width="100%">
+</p>
+
+## What This Skill Does
+
+- Finds the sentence, conflict, turn, or judgment in an article that is worth visualizing.
+- Chooses a paper-world metaphor that matches the domain: art, culture, life, product, business, engineering, AI, education, or psychology.
+- Uses paper operators only when their action improves comprehension.
+- Produces readable Chinese or English labels by default, instead of empty label boxes.
+- Keeps a consistent visual language across a whole article package without making every image look the same.
+
+The rule is simple: if removing the paper operator does not weaken the image, the operator should not be there.
+
+## Gallery
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="examples/images/01-aerial-paper-stage-hero.png" alt="High-angle paper stage" width="100%">
+      <br>
+      <sub><strong>High-angle paper stage.</strong> Good for systems, products, routes, cities, and multi-object scenes.</sub>
+    </td>
+    <td width="50%">
+      <img src="examples/images/02-art-attention-frame.png" alt="Art attention frame" width="100%">
+      <br>
+      <sub><strong>Art and attention.</strong> Paper operators become frame setters, light catchers, and color tuners.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="examples/images/03-life-boundary-room.png" alt="Life boundary room" width="100%">
+      <br>
+      <sub><strong>Life and psychology.</strong> Boundaries, care, memory, and emotional weather become rooms and paper objects.</sub>
+    </td>
+    <td width="50%">
+      <img src="examples/images/04-ai-town-systems.png" alt="AI town systems" width="100%">
+      <br>
+      <sub><strong>Product, AI, and systems.</strong> Routes, teams, checkpoints, and evidence become a readable tabletop world.</sub>
+    </td>
+  </tr>
+</table>
+
+## Why It Exists
+
+Most AI-generated article images fail in one of two ways: they are pretty but vague, or they are clear but look like a slide deck.
+
+Paper Operators tries to sit in the better middle:
+
+- clear enough to explain the idea in three seconds
+- warm enough that readers want to keep looking
+- structured enough to support long-form writing
+- distinctive enough to make a publication feel owned
+
+The style borrows the discipline of diagrams, the warmth of paper craft, and the editorial restraint of a good magazine figure. It does not copy Xiaohei-style black figures, white-dot eyes, blob mascots, generic stick people, robots, stock icons, or PPT infographics.
+
+## When To Use It
+
+Use Paper Operators for:
+
+- WeChat articles, blogs, newsletters, and long-form essays
+- product thinking, AI workflows, business judgment, engineering notes
+- art criticism, cultural essays, personal writing, psychology, education
+- explainers that need more humanity than arrows and boxes
+- visual packages where several images should feel related
+
+Avoid it when:
+
+- the image only needs a logo, icon, sticker, or decorative mascot
+- a simple chart or screenshot would explain the point better
+- the operator would stand beside the idea instead of acting on it
+
+## How It Works
+
+1. Pick one source anchor from the article.
+2. Decide what the reader should understand after seeing the image.
+3. Choose the domain and mood.
+4. Select a paper operator family.
+5. Answer `what breaks if removed`.
+6. Choose a scene: gallery table, boundary room, paper town, archive desk, route map, cutaway, shelf matrix, or another paper-world setup.
+7. Add readable labels in the user's language.
+8. Generate one image, then check clarity, action, text, composition, and style drift.
+
+Planning output includes:
+
+```text
+source anchor:
+reader takeaway:
+domain and mood:
+core action:
+operator decision:
+what breaks if removed:
+operator family:
+metaphor world:
+composition:
+labels:
+final image prompt:
+QA risks:
+```
+
+## Install
+
+Copy the Skill directory into your Codex skills folder:
+
+```bash
+mkdir -p ~/.codex/skills
+cp -R paper-operators ~/.codex/skills/paper-operators
+```
+
+Restart Codex, then call it by name:
+
+```text
+Use $paper-operators to plan three article body illustrations for this essay. Do not generate images yet.
+```
+
+Or generate one image directly:
+
+```text
+Use $paper-operators to generate a 16:9 article body illustration from the paragraph below.
+
+Text:
+Good taste is not decoration. It is placing attention in the right place.
+```
+
+## Example Prompts
+
+Plan an article package:
+
+```text
+Use $paper-operators to plan three article body illustrations for the following essay. Do not generate images yet.
+
+Requirements:
+- Chinese readers first
+- For each image, include source anchor, reader takeaway, operator family, and what breaks if removed
+- At least one image should not be an engineering/product diagram; adapt it to the essay's domain
+
+Essay:
+{paste article}
+```
+
+Generate a product or AI system image:
+
+```text
+Use $paper-operators to generate a product / AI system illustration.
+
+Source anchor:
+I am not asking one AI. I am organizing a group of AIs to complete a verifiable route.
+
+Requirements:
+- operator family: Thread Runner + Lens Keeper
+- high-angle paper town / workbench
+- a blue route from idea to AI team, checkpoint, and launch scene
+- include short Chinese labels: 想法, 团队, 校验, 上线
+```
+
+Generate an art essay image:
+
+```text
+Use $paper-operators to generate an art criticism illustration.
+
+Source anchor:
+Good taste is not decoration. It is placing attention in the right place.
+
+Requirements:
+- operator family: Frame Setter / Light Catcher
+- gallery workbench, frame placement, light card, color swatches, quiet negative space
+- do not turn it into a flowchart, funnel, or node network
+```
+
+More examples live in [`examples/prompts.md`](examples/prompts.md).
+
+## Follow The Work
+
+This repository contains the reusable Skill and examples. Longer breakdowns, prompt notes, article illustration reviews, AI writing practice, and product work will continue on my WeChat official account.
+
+If you care about making AI images less generic, making article judgment visible, and turning Codex Skills into reusable workflows, search for 「正在逐渐AI化」 on WeChat.
+
+<p align="center">
+  <img src="assets/wechat-official-account.png" alt="WeChat search: 正在逐渐AI化" width="720">
+</p>
+
+## Repository
+
+```text
+paper-operators/
+├── README.md
+├── README.en.md
+├── LICENSE
+├── NOTICE.md
+├── assets/
+│   └── wechat-official-account.png
+├── examples/
+│   ├── prompts.md
+│   └── images/
+├── docs/
+│   └── style-notes.md
+└── paper-operators/
+    ├── SKILL.md
+    ├── agents/openai.yaml
+    ├── references/
+    └── assets/examples/
+```
+
+The outer repository is for people reading the project. The inner `paper-operators/` directory is the actual Codex Skill.
+
+## License
+
+MIT. See [`LICENSE`](LICENSE).
