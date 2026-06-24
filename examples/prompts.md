@@ -1,5 +1,15 @@
 # Example Prompts / 示例提示词
 
+Codex 用户可以写 `用 $paper-operators ...`。
+
+Claude Code、Cursor、Hermes Agent、OpenClaw 或其他 Agent 工具，可以把 `$paper-operators` 换成：
+
+```text
+请按 Paper Operators 工作流处理下面这篇文章。
+```
+
+如果你的 Agent 没有读过本仓库，先把 [`agent-guides/paper-operators-agent.md`](../agent-guides/paper-operators-agent.md) 放进项目规则或自定义指令。
+
 ## 先规划，不生成
 
 ```text

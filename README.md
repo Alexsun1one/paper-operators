@@ -1,10 +1,12 @@
 # Paper Operators / 纸片人
 
-> 一个中文优先的 Codex Skill：把文章里的判断、转折和复杂关系，变成清楚、好看、有动作感的纸片人正文配图。
+> 一个中文优先的 Agent 配图工作流：把文章里的判断、转折和复杂关系，变成清楚、好看、有动作感的纸片人正文配图。
 
 [English](README.en.md)
 
-Paper Operators 面向写作者、产品人、研究者、教师、创作者，以及所有需要把复杂想法讲清楚的人。它不是一个「可爱小人」画风包，而是一套文章配图工作流：先读懂文章里真正值得画的那句话，再让无脸纸片人亲手完成关键动作。
+Paper Operators 面向写作者、产品人、研究者、教师、创作者，以及所有需要把复杂想法讲清楚的人。它不是一个「可爱小人」画风包，而是一套可以迁移到多种 Agent 工具里的文章配图工作流：先读懂文章里真正值得画的那句话，再让无脸纸片人亲手完成关键动作。
+
+这个仓库里已经提供了 Codex Skill 版本，但方法本身不依赖 Codex。Claude Code、Cursor、Hermes Agent、OpenClaw，或任何支持项目规则 / 自定义指令 / 工作流提示词的 Agent，都可以使用同一套规则。
 
 纸片人会装框、捕光、牵线、检视、开闸、照料、称重、归档、修补。它不是站在旁边卖萌，而是在图里把抽象概念做出来。
 
@@ -125,7 +127,9 @@ final image prompt:
 QA risks:
 ```
 
-## 安装
+## 接入方式
+
+### Codex
 
 把 Skill 目录复制到 Codex skills 目录：
 
@@ -148,6 +152,26 @@ cp -R paper-operators ~/.codex/skills/paper-operators
 文字：
 好的审美不是装饰，而是把注意力放到正确的位置。
 ```
+
+### 其他 Agent 工具
+
+如果你用的是 Claude Code、Cursor、Hermes Agent、OpenClaw 或其他 Agent 工具，不需要强行套 Codex Skill 格式。
+
+使用这个通用指令包即可：
+
+[`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md)
+
+推荐接法：
+
+| 工具 | 接入方式 |
+| --- | --- |
+| Claude Code | 使用 [`agent-guides/claude-code.md`](agent-guides/claude-code.md)，或把通用指令包摘到对应项目的 `CLAUDE.md`。 |
+| Cursor | 使用 [`agent-guides/cursor-rule.mdc`](agent-guides/cursor-rule.mdc)，或把通用指令包改成 project rule。 |
+| Hermes Agent | 作为可复用 workflow prompt / agent instruction。 |
+| OpenClaw | 作为自定义 workflow 或项目级 Agent 指令。 |
+| 其他 Agent | 只要支持 system / project / task instruction，就可以贴入通用指令包。 |
+
+核心不是工具名，而是这条链路：`source anchor -> reader takeaway -> operator inclusion test -> domain adaptation -> final prompt -> QA`。
 
 ## 示例提示词
 
@@ -199,7 +223,7 @@ Source anchor:
 
 这个仓库放的是可复用的 Skill 和示例。更完整的拆解、提示词、文章配图复盘、AI 写作和产品实践，我会继续写在公众号里。
 
-如果你也关心这些问题：怎么让 AI 图不再像模板、怎么把文章里的判断画清楚、怎么把 Codex Skill 做成真正可复用的工作流，欢迎关注「正在逐渐AI化」。
+如果你也关心这些问题：怎么让 AI 图不再像模板、怎么把文章里的判断画清楚、怎么把 Agent 工作流做成真正可复用的东西，欢迎关注「正在逐渐AI化」。
 
 <p align="center">
   <img src="assets/wechat-official-account.png" alt="微信搜一搜：正在逐渐AI化" width="720">
@@ -215,6 +239,11 @@ paper-operators/
 ├── NOTICE.md
 ├── assets/
 │   └── wechat-official-account.png
+├── agent-guides/
+│   ├── claude-code.md
+│   ├── cursor-rule.mdc
+│   ├── README.md
+│   └── paper-operators-agent.md
 ├── examples/
 │   ├── prompts.md
 │   └── images/
@@ -228,7 +257,7 @@ paper-operators/
     └── assets/examples/
 ```
 
-外层仓库给人读，内层 `paper-operators/` 是真正安装到 Codex 里的 Skill。
+外层仓库给人读，也提供跨 Agent 的通用指令；内层 `paper-operators/` 是可以直接安装到 Codex 里的 Skill。
 
 ## License
 

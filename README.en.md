@@ -1,10 +1,12 @@
 # Paper Operators
 
-> A Chinese-first Codex Skill for turning article ideas into clear, tactile, paper-stage illustrations.
+> A Chinese-first agent workflow for turning article ideas into clear, tactile, paper-stage illustrations.
 
 [中文](README.md)
 
 Paper Operators is built for people who write, explain, publish, teach, ship products, or make sense of complicated ideas. It turns an abstract sentence into a 16:9 article illustration where a small faceless paper person physically performs the core action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, or repairing.
+
+This repository includes a ready-to-install Codex Skill, but the method is not Codex-only. Claude Code, Cursor, Hermes Agent, OpenClaw, or any agent tool that supports project rules, custom instructions, or workflow prompts can use the same guide.
 
 It is not a mascot pack. It is a visual thinking tool.
 
@@ -134,7 +136,9 @@ final image prompt:
 QA risks:
 ```
 
-## Install
+## Integrations
+
+### Codex
 
 Copy the Skill directory into your Codex skills folder:
 
@@ -157,6 +161,26 @@ Use $paper-operators to generate a 16:9 article body illustration from the parag
 Text:
 Good taste is not decoration. It is placing attention in the right place.
 ```
+
+### Other Agent Tools
+
+If you use Claude Code, Cursor, Hermes Agent, OpenClaw, or another agent tool, you do not need to force it into the Codex Skill format.
+
+Use this portable instruction pack:
+
+[`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md)
+
+Suggested mapping:
+
+| Tool | How to use it |
+| --- | --- |
+| Claude Code | Use [`agent-guides/claude-code.md`](agent-guides/claude-code.md), or paste the portable guide into the relevant `CLAUDE.md` section. |
+| Cursor | Use [`agent-guides/cursor-rule.mdc`](agent-guides/cursor-rule.mdc), or adapt the portable guide into a project rule. |
+| Hermes Agent | Use it as a reusable workflow prompt / agent instruction. |
+| OpenClaw | Use it as a custom workflow or project-level agent instruction. |
+| Other agents | Paste it wherever the tool accepts system, project, or task instructions. |
+
+The important chain is: `source anchor -> reader takeaway -> operator inclusion test -> domain adaptation -> final prompt -> QA`.
 
 ## Example Prompts
 
@@ -209,7 +233,7 @@ More examples live in [`examples/prompts.md`](examples/prompts.md).
 
 This repository contains the reusable Skill and examples. Longer breakdowns, prompt notes, article illustration reviews, AI writing practice, and product work will continue on my WeChat official account.
 
-If you care about making AI images less generic, making article judgment visible, and turning Codex Skills into reusable workflows, search for 「正在逐渐AI化」 on WeChat.
+If you care about making AI images less generic, making article judgment visible, and turning agent workflows into reusable systems, search for 「正在逐渐AI化」 on WeChat.
 
 <p align="center">
   <img src="assets/wechat-official-account.png" alt="WeChat search: 正在逐渐AI化" width="720">
@@ -225,6 +249,11 @@ paper-operators/
 ├── NOTICE.md
 ├── assets/
 │   └── wechat-official-account.png
+├── agent-guides/
+│   ├── claude-code.md
+│   ├── cursor-rule.mdc
+│   ├── README.md
+│   └── paper-operators-agent.md
 ├── examples/
 │   ├── prompts.md
 │   └── images/
@@ -238,7 +267,7 @@ paper-operators/
     └── assets/examples/
 ```
 
-The outer repository is for people reading the project. The inner `paper-operators/` directory is the actual Codex Skill.
+The outer repository is for people reading the project and for portable agent instructions. The inner `paper-operators/` directory is the ready-to-install Codex Skill.
 
 ## License
 

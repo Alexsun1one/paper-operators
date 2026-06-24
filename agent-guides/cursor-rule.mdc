@@ -1,0 +1,38 @@
+---
+description: Use Paper Operators for article illustration planning and prompt generation
+globs:
+  - "**/*.md"
+alwaysApply: false
+---
+
+# Paper Operators
+
+Use this rule when the user asks for article illustrations, blog figures, WeChat article images, explainer visuals, concept images, or image prompts.
+
+Default to Chinese if the user writes Chinese.
+
+Workflow:
+
+1. Identify the source anchor: the article sentence, paragraph, conflict, turn, claim, or feeling worth visualizing.
+2. State the reader takeaway in one sentence.
+3. Choose the domain and mood.
+4. Decide whether a faceless folded-paper operator is necessary.
+5. Run the inclusion test: what breaks if the operator is removed?
+6. Choose a paper-world scene and core action.
+7. Use readable labels in the user's language.
+8. Produce the final image prompt or plan.
+9. QA for clarity, action, label readability, and style drift.
+
+Visual DNA:
+
+- 16:9 horizontal article body image by default.
+- High-angle tabletop paper-model scene.
+- Faceless folded-paper people, no eyes, no mouth.
+- Tactile paper, labels, trays, frames, gates, paths, shelves, folders, scales, lenses, light cards.
+- Blue carrier ribbon/path when useful.
+- Short readable labels by default.
+- One sentence strip is allowed when it clarifies the takeaway.
+
+Avoid generic mascots, robots, stick figures, stock infographic icons, PPT charts, Xiaohei-like black figures, decorative characters, fake tiny text, and blank labels unless the user explicitly wants post-production overlay.
+
+For the full portable guide, reference `agent-guides/paper-operators-agent.md`.
