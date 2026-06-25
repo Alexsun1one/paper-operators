@@ -19,6 +19,8 @@
 - The image does not copy Xiaohei's black body, white-dot eyes, tiny legs, or doodle identity.
 - The image avoids generic PPT, stock icons, robot heads, AI brains, and fake dense text.
 - In aerial paper-stage mode, the scene is three-dimensional and high-angle; complexity matches the article; paths, labels, and state coding remain legible.
+- If this is for a README/gallery/showcase, it would still attract a non-engineering writer; at least one scene in the set should be art, culture, life, psychology, education, food, travel, or another human domain.
+- Native label status is explicit: labels are readable inside the image, intentionally omitted because the scene reads without them, or externally overlaid only because the user requested it.
 
 ## Regenerate
 
@@ -37,6 +39,7 @@
 - The output is charming but unclear.
 - The output is accurate but lifeless.
 - The high-angle scene is crowded, label placement is random, or the blue path does not guide the eye.
+- Every showcase image is a product/engineering workflow by habit, making the skill look narrower than it is.
 
 ## Repair Moves
 

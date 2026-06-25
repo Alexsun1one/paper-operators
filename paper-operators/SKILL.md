@@ -22,6 +22,7 @@ Paper Operators turns an article idea into a tactile paper-stage illustration wh
 9. Build the final image prompt using `references/prompt-template.md`.
 10. Generate or edit one image at a time.
 11. Run QA with `references/qa-checklist.md`; regenerate if the operator is decorative, the style drifts, complexity is unmanaged, labels are missing, or the idea is unclear.
+12. For README, portfolio, or showcase images, include at least one non-engineering domain when possible: art, culture, life, psychology, education, food, travel, or personal essays. The skill should not look like it only draws workflows.
 
 ## Inclusion Test
 
@@ -113,6 +114,7 @@ For generation, produce one image at a time and report:
 - image path
 - intended placement
 - one-line purpose
+- native label status: confirm whether labels/sentence strips are rendered inside the image, intentionally omitted, or externally overlaid because the user requested post-production
 - whether it passes QA or needs regeneration
 
 ## References
