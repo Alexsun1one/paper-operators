@@ -4,14 +4,14 @@
 
 [English](README.en.md)
 
-Paper Operators 面向写作者、产品人、研究者、教师、创作者，以及所有需要把复杂想法讲清楚的人。它不是一个「可爱小人」画风包，而是一套可以迁移到多种 Agent 工具里的文章配图工作流：先读懂文章里真正值得画的那句话，再让无脸纸片人亲手完成关键动作。
+Paper Operators 面向写作者、产品人、研究者、教师、创作者，以及所有需要把复杂想法讲清楚的人。它不是一个「可爱小人」画风包，而是一套可以迁移到多种 Agent 工具里的文章配图工作流：先读懂文章里真正值得画的那句话，再让纸片人亲手完成关键动作。
 
 这个仓库里已经提供了 Codex Skill 版本，但方法本身不依赖 Codex。Claude Code、Cursor、Hermes Agent、OpenClaw，或任何支持项目规则 / 自定义指令 / 工作流提示词的 Agent，都可以使用同一套规则。
 
 纸片人会装框、捕光、牵线、检视、开闸、照料、称重、归档、修补。它不是站在旁边卖萌，而是在图里把抽象概念做出来。
 
 <p align="center">
-  <img src="examples/images/readme/10-emotion-boundary-room.jpg" alt="把情绪放回合适的位置" width="100%">
+  <img src="examples/images/readme/v2-life-boundary.jpg" alt="把情绪放回合适的位置" width="100%">
 </p>
 
 ## 它解决什么问题
@@ -28,72 +28,43 @@ Paper Operators 想要的是另一种状态：
 
 一句话判断：如果把纸片人拿掉，图还是同样清楚，那这张图就不该画纸片人。
 
-## 示例图
+## 效果展示
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/01-readable-chinese-route.jpg" alt="中文路线示例" width="100%">
-      <br>
-      <sub><strong>中文标签路线。</strong>观点、关系、状态、文字和结果沿着同一条路径展开。</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/02-aerial-paper-stage-hero.jpg" alt="高空纸模舞台" width="100%">
-      <br>
-      <sub><strong>高空纸模舞台。</strong>适合系统、产品、城市、路线和多对象关系。</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/03-art-attention-frame.jpg" alt="艺术审美装框示例" width="100%">
-      <br>
-      <sub><strong>艺术与审美。</strong>纸片人可以是装框员、捕光员、调色员，而不是工程流程图里的小工人。</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/10-emotion-boundary-room.jpg" alt="情绪边界房间" width="100%">
-      <br>
-      <sub><strong>生活与心理。</strong>情绪、边界和照料，可以变成房间、屏风、天气卡和一盏被重新点亮的灯。</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/04-life-boundary-room.jpg" alt="生活心理边界房间" width="100%">
-      <br>
-      <sub><strong>边界房间。</strong>不是冷冰冰的流程图，而是把自我、余地和照料放回可见空间。</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/05-ai-town-systems.jpg" alt="AI 系统小镇" width="100%">
-      <br>
-      <sub><strong>产品、AI 与系统。</strong>团队、校验、上线、证据和路线，可以被组织成一个可读的桌面世界。</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/07-chat-copilot-agent.jpg" alt="从问答到派活" width="100%">
-      <br>
-      <sub><strong>从问答到派活。</strong>Chat、Copilot、Agent 的差异，不是名词差异，而是工作闭环差异。</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/06-materials-before-conclusion.jpg" alt="先把材料摊开，再下结论" width="100%">
-      <br>
-      <sub><strong>先摊材料。</strong>把证据、材料和结论的先后关系做成一眼能看的桌面秩序。</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/08-agent-launch-six-forces.jpg" alt="Agent 上场六股力量" width="100%">
-      <br>
-      <sub><strong>Agent 上场。</strong>不是一匹马，是模型、上下文、工具、生态、成本和企业需求一起动。</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/09-agent-service-results.jpg" alt="从旧 SaaS 到 Agent 代办" width="100%">
-      <br>
-      <sub><strong>Agent 代办。</strong>牌桌从“用工具”变成“买结果”，配图也要画出付费对象的变化。</sub>
-    </td>
-  </tr>
-</table>
+> 下面的示例图全部由 **Codex 生图**。就目前的渲染层来看，**Codex 的生图效果最佳**——纸张质感、立体纸模、可读中文标签和操作动作都最稳。把 `final image prompt` 交给 Codex 渲染，是当前最推荐的出图方式。
 
-说明：README 里展示的是为 GitHub 加载速度压缩过的预览图，不代表实际生成图的清晰度。旧版 PNG 示例仍保留在 [`examples/images/`](examples/images/) 目录，新加入的首页样图放在 `examples/images/readme/`。
+### v2 · 串联系列：一条蓝色工带，串起一整篇文章
+
+一篇「从一个人提问，到组织一群 Agent 交付一条可验证结果」的文章，四张正文图共享同一个牵线员、同一套配色；蓝色工带的状态逐张推进，`校验章` 母题从「待用」一路盖到「已校验」。这正是 v2 新增的**串联**能力。
+
+<p align="center">
+  <img src="examples/images/readme/v2-series-1.jpg" alt="开场·问答" width="100%">
+  <br><sub><strong>① 开场 · 问答。</strong>牵线员把松散的蓝色工带从「想法 / 提问 / 意图」卡上拉起，路线待路由，校验章待用。</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-2.jpg" alt="展开·分工" width="100%">
+  <br><sub><strong>② 展开 · 分工。</strong>同一条工带被拉紧、分流到 Agent A / B / C，意图变成可并行的工作段。</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-3.jpg" alt="转折·校验" width="100%">
+  <br><sub><strong>③ 转折 · 校验。</strong>产出过检视镜，风险用珊瑚色分支标出（状态编码），校验章仍待盖印。</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-4.jpg" alt="收束·交付" width="100%">
+  <br><sub><strong>④ 收束 · 交付。</strong>工带穿过校验闸门落入交付托盘，校验章盖在「结果」上变成「已校验」——母题回收，论证收口。</sub>
+</p>
+
+### 跨领域大图：不只画工作流
+
+<p align="center">
+  <img src="examples/images/readme/v2-art-attention.jpg" alt="艺术·把注意力放到正确的位置" width="100%">
+  <br><sub><strong>艺术与审美。</strong>装框员对齐空框、举光卡、留白：「把注意力放到正确的位置」。蓝色只用在框内焦点上。</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-life-boundary.jpg" alt="生活·边界与余地" width="100%">
+  <br><sub><strong>生活与心理。</strong>边界屏风把房间一分为二，把压力放在外面，给关系留出可以呼吸的余地。</sub>
+</p>
+
+说明：以上为 1600px 大图预览（已为 GitHub 加载做了压缩），完整高清原图见 [`examples/images/showcase/`](examples/images/showcase/)；更多旧版示例仍保留在 [`examples/images/`](examples/images/)。
 
 ## 适合谁
 
@@ -157,6 +128,11 @@ QA risks:
 
 这四层是组合关系：先定关系，用原元素和状态编码把它画准，多张图时再用一条主路径把它们串起来。
 
+此外，v2 还细化了两条：
+
+- **纸片人可以有表情（用来编码状态）** —— 默认平脸；当需要让读者读出操作员的状态（吃力、凝神、受压、舒展、照料）时，可以给他画上极简手绘表情：两条线当眉/眼、一条线当嘴，侧脸或三七侧、看着手里的活。靠抽象简单避开恐怖谷，不是正对镜头卖萌，也不是小黑的白点眼。
+- **关系要「演」成立体纸场景，不是把图表纸片化** —— 调研沉淀下来的图表/关系词汇是「要表达哪种关系」的清单；成品要用素材排布 + 循环/线条指引 + 纸片人状态 + 真实景深，把图表级的信息量做成一眼看懂、醒目立体、又不拥挤的 3D 场景，而不是一张带纸纹的平面图表图标。
+
 ## 接入方式
 
 ### Codex
@@ -205,7 +181,7 @@ cp -R paper-operators ~/.codex/skills/paper-operators
 
 Hermes Agent 和 OpenClaw 应该都可以使用这套方法：把 [`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md) 作为 workflow prompt / 项目级指令给它们即可。它们不需要识别 Codex Skill 格式，只要能遵循普通 Markdown 指令，就能完成文章分析、构图规划、标签设计和最终提示词输出。
 
-需要注意：跨 Agent 复用的是分析、构图和提示词工作流；最终成图质量仍取决于图像模型。Claude Code、Cursor、Hermes Agent、OpenClaw 可以负责规划和生成最终提示词；如果它们当前没有强生图能力，建议把 `final image prompt` 交给更强的图像模型渲染。具体兼容性见 [`agent-guides/compatibility.md`](agent-guides/compatibility.md)，也可以用 [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) 测试一个新 Agent 是否真的理解了这套工作流。
+需要注意：跨 Agent 复用的是分析、构图和提示词工作流；最终成图质量仍取决于图像模型。**就目前实测，Codex 的生图效果最佳**（本仓库「效果展示」里的样图都由 Codex 生成），所以最推荐的链路是：用任意 Agent 跑工作流产出 `final image prompt`，再把它交给 Codex 渲染。Claude Code、Cursor、Hermes Agent、OpenClaw 也都可以负责规划和生成最终提示词；如果它们当前没有强生图能力，就把 `final image prompt` 交给 Codex 或其他更强的图像模型渲染。具体兼容性见 [`agent-guides/compatibility.md`](agent-guides/compatibility.md)，也可以用 [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) 测试一个新 Agent 是否真的理解了这套工作流。
 
 ## 示例提示词
 

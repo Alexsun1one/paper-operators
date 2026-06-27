@@ -4,14 +4,14 @@
 
 [中文](README.md)
 
-Paper Operators is built for people who write, explain, publish, teach, ship products, or make sense of complicated ideas. It turns an abstract sentence into a 16:9 article illustration where a small faceless paper person physically performs the core action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, or repairing.
+Paper Operators is built for people who write, explain, publish, teach, ship products, or make sense of complicated ideas. It turns an abstract sentence into a 16:9 article illustration where a small folded-paper person physically performs the core action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, or repairing.
 
 This repository includes a ready-to-install Codex Skill, but the method is not Codex-only. Claude Code, Cursor, Hermes Agent, OpenClaw, or any agent tool that supports project rules, custom instructions, or workflow prompts can use the same guide.
 
 It is not a mascot pack. It is a visual thinking tool.
 
 <p align="center">
-  <img src="examples/images/readme/06-materials-before-conclusion.jpg" alt="Lay out the material before drawing conclusions" width="100%">
+  <img src="examples/images/readme/v2-life-boundary.jpg" alt="Put the weight outside so the room can breathe" width="100%">
 </p>
 
 ## What This Skill Does
@@ -24,60 +24,43 @@ It is not a mascot pack. It is a visual thinking tool.
 
 The rule is simple: if removing the paper operator does not weaken the image, the operator should not be there.
 
-## Gallery
+## Showcase
 
-<table>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/01-readable-chinese-route.jpg" alt="Readable Chinese route" width="100%">
-      <br>
-      <sub><strong>Readable Chinese route.</strong> Claim, relation, state, text, and outcome unfold along one path.</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/02-aerial-paper-stage-hero.jpg" alt="High-angle paper stage" width="100%">
-      <br>
-      <sub><strong>High-angle paper stage.</strong> Good for systems, products, routes, cities, and multi-object scenes.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/03-art-attention-frame.jpg" alt="Art attention frame" width="100%">
-      <br>
-      <sub><strong>Art and attention.</strong> Paper operators become frame setters, light catchers, and color tuners.</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/04-life-boundary-room.jpg" alt="Life boundary room" width="100%">
-      <br>
-      <sub><strong>Life and psychology.</strong> Boundaries, care, memory, and emotional weather become rooms and paper objects.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/05-ai-town-systems.jpg" alt="AI town systems" width="100%">
-      <br>
-      <sub><strong>Product, AI, and systems.</strong> Routes, teams, checkpoints, and evidence become a readable tabletop world.</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/07-chat-copilot-agent.jpg" alt="From Q&A to delegated work" width="100%">
-      <br>
-      <sub><strong>From Q&A to delegated work.</strong> Chat, Copilot, and Agent differ by work loop, not by naming.</sub>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <img src="examples/images/readme/08-agent-launch-six-forces.jpg" alt="Agent launch with six forces" width="100%">
-      <br>
-      <sub><strong>Agents entering the field.</strong> It is not one horse; models, context, tools, ecosystem, cost, and enterprise demand move together.</sub>
-    </td>
-    <td width="50%">
-      <img src="examples/images/readme/09-agent-service-results.jpg" alt="From old SaaS to agent service outcomes" width="100%">
-      <br>
-      <sub><strong>Agent service outcomes.</strong> The table shifts from using tools to buying results.</sub>
-    </td>
-  </tr>
-</table>
+> Every image below was rendered by **Codex**. On the rendering layer today, **Codex gives the best results** — paper texture, dimensional paper models, readable Chinese labels, and operator action all come out most reliably. Handing the `final image prompt` to Codex is the currently recommended way to render.
 
-Note: the images shown in this README are compressed previews for faster GitHub loading. They do not represent the full sharpness of the generated originals. Earlier PNG examples remain in [`examples/images/`](examples/images/), while the new homepage examples live in `examples/images/readme/`.
+### v2 · Chained series: one blue work ribbon, one whole article
+
+An article about "going from one person asking, to organizing a team of Agents to deliver a verifiable result." Four body images share the same thread runner and palette; the blue work ribbon's state advances image to image, and the `校验 / verify` stamp motif goes from "pending" to "stamped." This is the new **series chaining** capability.
+
+<p align="center">
+  <img src="examples/images/readme/v2-series-1.jpg" alt="Opening · the question" width="100%">
+  <br><sub><strong>① Opening · the question.</strong> The operator pulls a loose blue ribbon off the idea/question/intent cards; the route is unrouted, the verify stamp is pending.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-2.jpg" alt="Build · delegation" width="100%">
+  <br><sub><strong>② Build · delegation.</strong> The same ribbon, now taut, branches to Agents A / B / C — intent becomes parallel work.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-3.jpg" alt="Turn · verification" width="100%">
+  <br><sub><strong>③ Turn · verification.</strong> Output passes under the inspection lens; risk is marked on a coral branch (state coding); the stamp is still unstamped.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-4.jpg" alt="Resolution · delivery" width="100%">
+  <br><sub><strong>④ Resolution · delivery.</strong> The ribbon passes the verify gate into the delivery tray; the stamp lands on the result card — motif paid off, argument closed.</sub>
+</p>
+
+### Range: not only workflows
+
+<p align="center">
+  <img src="examples/images/readme/v2-art-attention.jpg" alt="Art · placing attention" width="100%">
+  <br><sub><strong>Art and aesthetics.</strong> A frame setter aligns an empty frame, holds a light card, keeps negative space: "place attention in the right place." Blue is reserved for the one focus.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-life-boundary.jpg" alt="Life · boundary and room" width="100%">
+  <br><sub><strong>Life and psychology.</strong> A boundary screen splits the room; the weight stays outside so the relationship has room to breathe.</sub>
+</p>
+
+Note: the images above are 1600px previews (compressed for GitHub loading); full-resolution originals live in [`examples/images/showcase/`](examples/images/showcase/), and earlier examples remain in [`examples/images/`](examples/images/).
 
 ## Why It Exists
 
@@ -156,6 +139,11 @@ This version extends Paper Operators from "draw one good image" to "render the e
 
 The layers compose: pick the relationship, render it with primitives and state coding, and chain multiple images with a shared throughline.
 
+Two further v2 refinements:
+
+- **The operator may have a face (to encode state).** Plain by default; when the reader needs to feel the operator's state — effort, focus, strain, relief, care — give it a minimal hand-drawn expression: two strokes for brows/eyes, one for the mouth, in profile or three-quarter, looking at the work. Abstract and sparse to avoid the uncanny valley — not a cute grin at the reader, not Xiaohei white-dot eyes.
+- **Stage relationships as scenes, not chart icons.** The researched chart/relationship vocabulary is a list of relations to express, not icons to paper-ify. Build the relation with material arrangement, line or loop guidance, the operator's state, and real depth — chart-level information density in a 3D paper world that reads in one glance, never a flat paper-textured chart icon.
+
 ## Integrations
 
 ### Codex
@@ -204,7 +192,7 @@ The important chain is: `source anchor -> reader takeaway -> operator inclusion 
 
 Hermes Agent and OpenClaw should be able to use this method as long as they can read or paste ordinary project instructions. Give them [`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md) as a workflow prompt or project-level instruction. They do not need to understand the Codex Skill package format to perform article analysis, composition planning, label design, and final prompt generation.
 
-Important: what transfers across agents is the analysis, composition, and prompt workflow. Final image quality still depends on the image model. Claude Code, Cursor, Hermes Agent, and OpenClaw can plan the figure and produce the final renderer prompt; if they do not have a strong image model available, hand that prompt to a better renderer. See [`agent-guides/compatibility.md`](agent-guides/compatibility.md), and use [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) to check whether a new agent actually follows the workflow.
+Important: what transfers across agents is the analysis, composition, and prompt workflow. Final image quality still depends on the image model. **In practice, Codex gives the best rendering results today** (every image in the Showcase section above was rendered by Codex), so the recommended path is: run the workflow in any agent to produce the `final image prompt`, then hand it to Codex to render. Claude Code, Cursor, Hermes Agent, and OpenClaw can all plan the figure and produce the final renderer prompt; if they do not have a strong image model available, hand that prompt to Codex or another strong renderer. See [`agent-guides/compatibility.md`](agent-guides/compatibility.md), and use [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) to check whether a new agent actually follows the workflow.
 
 ## Example Prompts
 

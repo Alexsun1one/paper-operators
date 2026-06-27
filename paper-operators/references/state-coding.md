@@ -92,6 +92,20 @@ Show amount and intensity with form, not numbers.
 - **Gauge needle** — the needle's angle shows intensity or fill.
 - **Fill level** — how full a well, bin, or jar is drawn shows quantity remaining or consumed.
 
+## Operator Expression States / 操作员表情状态
+
+The operator's face is a state encoding too. A few hand-drawn line strokes read the operator's relationship to the work — how hard, how sure, how settled — without any text. Use it only when that state matters; otherwise keep the face plain.
+
+- **Neutral / 平静** — two straight brow/eye lines, a flat mouth; the default, when no state needs reading.
+- **Effort / 吃力·专注** — brows angled down and inward, mouth a tight short line; the operator is straining or concentrating (e.g. holding a heavy tradeoff, pulling a taut ribbon).
+- **Focus / 凝神** — narrowed brow lines turned toward the work, mouth small and flat; careful inspection.
+- **Strain / 受压** — brows pinched, mouth a small downward line; the work is heavy or going wrong (pairs with risk coral nearby).
+- **Relief / 舒展** — brows lifted and relaxed, mouth a small upward curve; a beat has resolved (pairs with passage blue or growth mint).
+- **Satisfaction / 落定** — eased brows, a calm upward mouth; the deliverable is done (e.g. after the stamp lands).
+- **Care / 照料** — soft, lowered brows turned toward a fragile object; tenderness, in life/psychology scenes.
+
+Rules: one expression per operator; abstract line strokes only, no realistic features; profile or three-quarter, looking at the work, never head-on; in a series, progress the expression with the throughline (e.g. focus → strain → relief). A single red line may mark a stronger mouth beat. If removing the face changes nothing about the meaning, keep it neutral.
+
 ## Encoding Budget / 编码预算
 
 Do not stack encodings until the scene screams.

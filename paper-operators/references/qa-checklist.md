@@ -7,7 +7,7 @@
 - The article domain is visible in tools, props, palette, and metaphor world.
 - The Paper Operator performs the core action.
 - Removing the operator would weaken the relation, reader path, or focal action.
-- The operator is faceless and folded-paper, with no eyes or mouth.
+- The operator is folded-paper; its face is plain, or carries one simple hand-drawn expression (a few line strokes, profile or three-quarter) that encodes its state without realistic features.
 - The operator is smaller than the idea, but not decorative.
 - The action verb is physical and visible.
 - Labels are short, readable, and attached to objects.
@@ -29,9 +29,11 @@
 - Engineering props appear in a non-engineering article without reason.
 - An art or culture article becomes a workflow diagram by habit.
 - A personal essay becomes a cold chart by habit.
-- The character becomes too cute, expressive, or mascot-like.
-- The figure has eyes, mouth, facial expression, hair, or costume identity.
-- The visual identity resembles Xiaohei.
+- The character becomes cute-first or mascot-like, or grins at the reader with an expression that does not encode state.
+- The face has realistic features (pupils, teeth, nose), hair, or costume identity, or hits the uncanny valley instead of staying abstract line strokes.
+- The expression faces the reader head-on instead of turning toward the work.
+- A relationship is flattened into a paper-textured chart icon (flat paper pyramid, funnel, venn, org-tree) instead of a deep 3D operator scene with material arrangement, line/loop guidance, and operator state.
+- The visual identity resembles Xiaohei (black blob body or white-dot eyes).
 - The image has too many operators.
 - The tool does not match the domain.
 - Labels float in empty space.
@@ -58,7 +60,7 @@ Regenerate so the operator physically changes the scene. Pick one action: frame,
 If it looks like Xiaohei:
 
 ```text
-Regenerate with off-white folded-paper body, charcoal outline, no face, no black blob body, no white-dot eyes, no tiny thin legs, no doodle mascot identity.
+Regenerate with off-white folded-paper body, charcoal outline, a plain or one-simple-line expression, no black blob body, no white-dot eyes, no tiny thin legs, no doodle mascot identity.
 ```
 
 If it looks like PPT:

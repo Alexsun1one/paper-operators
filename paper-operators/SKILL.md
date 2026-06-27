@@ -1,11 +1,11 @@
 ---
 name: paper-operators
-description: Generate or plan publish-grade 16:9 article illustrations using faceless folded-paper action characters, with Chinese-first article/body-image workflows. Use when a user wants Chinese or English article illustrations, blog figures, explainer visuals, social/article images, or concept images where a small paper person should physically perform the core idea. Especially useful for turning abstract claims, emotions, cultural ideas, art criticism, product thinking, systems, workflows, tensions, boundaries, transformations, relationships, and evidence into clear high-angle paper-model scenes, as single figures or chained multi-image series. Do not use for generic mascots, cute stickers, Xiaohei-style black figures, stock PPT infographics, or image requests where no action character helps comprehension.
+description: Generate or plan publish-grade 16:9 article illustrations using folded-paper action characters, with Chinese-first article/body-image workflows. Use when a user wants Chinese or English article illustrations, blog figures, explainer visuals, social/article images, or concept images where a small paper person should physically perform the core idea. Especially useful for turning abstract claims, emotions, cultural ideas, art criticism, product thinking, systems, workflows, tensions, boundaries, transformations, relationships, and evidence into clear high-angle paper-model scenes, as single figures or chained multi-image series. Do not use for generic mascots, cute stickers, Xiaohei-style black figures, stock PPT infographics, or image requests where no action character helps comprehension.
 ---
 
 # Paper Operators / 纸片人
 
-Paper Operators turns an article idea into a tactile paper-stage illustration where a small faceless paper person performs the core conceptual action.
+Paper Operators turns an article idea into a tactile paper-stage illustration where a small folded-paper person performs the core conceptual action.
 
 默认面向中文文章配图；用户使用英文时再切换英文输出。Use this skill to create a consistent article-illustration style: paper people, physical metaphors, readable labels, clear reader paths, and domain-aware tools. The character is never decoration. If removing the paper operator does not weaken the image, do not use one.
 
@@ -68,7 +68,7 @@ Core visual DNA:
 - high-angle tabletop paper-model scene when the user wants the newer polished style
 - adaptive complexity: choose the simplest sufficient form, but allow complex multi-state scenes when the article needs them and the path/status system stays clear
 - mandatory readable labels by default: short Chinese/English labels attached to objects; use 3-6 for simple figures and more for complex multi-state figures when the extra labels make the route clearer
-- faceless folded-paper people, no eyes, no mouth
+- folded-paper people with a calm plain face by default, or one simple hand-drawn expression (a few line strokes for brows/eyes and mouth, profile or three-quarter) when it encodes the operator's state; never realistic, never head-on, never Xiaohei white-dot eyes
 - off-white paper body, charcoal outline, small semantic color tabs
 - tactile paper, translucent tools, light shadows, quiet editorial composition
 - flowing blue carrier ribbon/path for the main reader route when useful
@@ -98,7 +98,7 @@ Always let the article choose the operator's tool and world. Do not force engine
 
 Four references give the skill its depth. Reach for them in this order.
 
-- **Relationship first** (`references/relationship-grammar.md`): name the exact relationship the image must show, then render its direction, condition, and state. This is what stops every image from collapsing into a generic left-to-right arrow. A precise relationship is the difference between "two things with a line" and "B depends on A, and breaks without it."
+- **Relationship first** (`references/relationship-grammar.md`): name the exact relationship the image must show, then render its direction, condition, and state. This is what stops every image from collapsing into a generic left-to-right arrow. A precise relationship is the difference between "two things with a line" and "B depends on A, and breaks without it." Express the relation as a deep 3D paper scene — material arrangement, line or loop guidance, and the operator's state — not as a flat paper-ified chart icon (see "Relationships As Scenes, Not Chart Icons" in `references/style-dna.md`).
 - **Primitives as the kit** (`references/primitives.md`): build every scene from a known set of paper parts — carriers, surfaces, enclosures, optics, measures, state containers, label containers, and the paper-person construction kit. One primitive carries one meaning; reuse the same primitive for the same meaning so a set of images feels like one world.
 - **State coding for precision** (`references/state-coding.md`): show status, degree, and quality without extra text — color semantics, path thickness and texture, elevation, gate posture, edge condition, light, and degree. Keep an encoding budget: pick the one or two encodings that carry the article's precision and let the rest stay neutral.
 - **Series for chaining** (`references/series-and-chaining.md`): when an article needs several images, chain them into one argument. Keep the operator, palette, and label style constant; advance one throughline ribbon across the set; introduce a small motif early and pay it off at the end.

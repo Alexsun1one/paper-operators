@@ -88,14 +88,15 @@ Labels live on objects, never in empty space. Mirror the label rules in `style-d
 
 The operator is assembled from the same kinds of paper parts as the scene. The tool does the storytelling; the body stays quiet.
 
-- **Head tiles** — a folded tile, hood, or wedge as the head; never a face.
+- **Head tiles** — a folded tile, hood, or wedge as the head; calm and plain by default.
+- **Expression** — optional: a few hand-drawn line strokes (two for brows/eyes, one for the mouth; profile or three-quarter, looking at the work) that encode the operator's state — effort, focus, strain, relief, satisfaction, care. Keep it abstract and sparse to avoid the uncanny valley; never realistic, never head-on, never Xiaohei white-dot eyes. See `references/state-coding.md` and `references/style-dna.md`.
 - **Torso shapes** — rounded rectangle, capsule, tile, wedge, arc, or strip stack.
 - **Limb rules** — only the limbs needed to perform the action; quiet otherwise.
 - **Tool mounts** — the hand or body presents exactly one domain-specific tool.
 - **Color-tab placement** — one small semantic color tab on the operator or tool, no more.
 - **Scale** — the operator is 8-18% of canvas height; secondary to the idea, essential to the relation.
 
-Reaffirm: no eyes, no mouth, no face, no hair, no costume identity. Not Xiaohei — no black blob body, no white-dot eyes, no tiny thin legs, no doodle mascot. Not a mascot — not cute, expressive, waving, presenting, a sticker, a logo, a robot, an avatar, or a silhouette.
+Reaffirm: no hair, no costume identity, no realistic facial features. The face is either plain or one simple state-coding expression. Not Xiaohei — no black blob body, no white-dot eyes, no tiny thin legs, no doodle mascot. Not a mascot — not cute-first, not grinning at the reader, not waving, presenting, a sticker, a logo, a robot, an avatar, or a silhouette.
 
 ## Carrier-Ribbon Variants / 载体绸带变体
 

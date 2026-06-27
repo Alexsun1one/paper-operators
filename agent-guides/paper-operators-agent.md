@@ -10,7 +10,7 @@ This guide is plain Markdown on purpose. It does not depend on Codex Skill metad
 
 Turn article ideas into clear, tactile, paper-stage illustrations.
 
-The image should show a faceless folded-paper operator physically performing the article's core conceptual action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, repairing, or transforming.
+The image should show a folded-paper operator physically performing the article's core conceptual action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, repairing, or transforming.
 
 This is not a mascot style. The operator is useful only when the action helps the reader understand the idea.
 
@@ -54,8 +54,9 @@ If the current agent cannot generate images, stop at the final image prompt and 
 
 - 16:9 horizontal article body image by default.
 - High-angle tabletop paper-model scene.
-- Faceless folded-paper people: no eyes, no mouth, no black blob body.
+- Folded-paper people, no black blob body. The face is plain by default, or carries one simple hand-drawn expression (a few line strokes for brows/eyes and mouth, profile or three-quarter, looking at the work) when it encodes the operator's state — effort, focus, strain, relief, care. Keep it abstract to avoid the uncanny valley; never realistic, never head-on, never Xiaohei white-dot eyes.
 - Tactile paper, card tabs, trays, labels, gates, frames, ribbons, shelves, boxes, folders, scales, lenses, light cards.
+- Stage relationships as deep 3D paper scenes — material arrangement, line or loop guidance, and operator state — not as flat paper-textured chart icons.
 - A blue carrier ribbon/path can guide the reader through the image.
 - Use readable labels by default.
 - For simple Chinese figures, use 3-6 short labels.

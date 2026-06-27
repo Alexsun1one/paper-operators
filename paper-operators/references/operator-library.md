@@ -242,7 +242,7 @@ Use two operators only when the relation is between two parties and one operator
 Rules:
 
 - Keep one focal action.
-- Keep both operators faceless, folded-paper, and smaller than the relationship object.
+- Keep both operators folded-paper and smaller than the relationship object; each may carry its own simple state expression (e.g. one strained, one calm).
 - Let each operator hold one side of the relation: pull tab, handoff tray, mirror frame, scale side, or shared thread.
 - Do not turn the image into a cast of characters.
 
