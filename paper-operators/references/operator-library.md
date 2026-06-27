@@ -149,3 +149,161 @@ Weak verbs:
 - decorate
 - point vaguely
 - wave
+
+## Relationship Operators
+
+### Bridge Relay / 接力员
+
+Use for handoff across a gap, sequence with ownership change, stage transition, or baton-like responsibility.
+
+Actions: pass, receive, bridge, carry, transfer, mark.
+
+Tools: handoff tray, bridge strip, baton card, ownership tag, relay marker.
+
+### Mirror Comparator / 对照员
+
+Use for contrast, comparison, A-vs-B, before-vs-after, claim-vs-proof, or matched difference.
+
+Actions: mirror, compare, align, split, mark, isolate.
+
+Tools: split frame, paired trays, mirrored labels, comparison ruler, light divider.
+
+### Weaver / 编织员
+
+Use for interwoven threads, multiple relationships, serial connection, divergence, convergence, or synthesis.
+
+Actions: weave, braid, join, fork, gather, thread.
+
+Tools: braided ribbon, loom card, thread comb, path pins, collector strip.
+
+### Anchor Pin / 定位员
+
+Use for reference point, invariant, dependency, fixed position, baseline, or tension held in place.
+
+Actions: pin, hold, fix, align, ground, steady.
+
+Tools: anchor pin, baseline strip, registration marks, clamp tab, quiet plinth.
+
+### Cartographer / 制图员
+
+Use for system terrain, route choice, territory, part-whole relation, landscape of options, or whole-field mapping.
+
+Actions: map, chart, survey, mark, route, locate.
+
+Tools: folded map, terrain tray, route pins, legend tabs, contour layers.
+
+### Valve Keeper / 阀门员
+
+Use for rate, degree, throttle, flow control, permission amount, boundary softness, or balancing feedback.
+
+Actions: throttle, regulate, meter, release, slow, open.
+
+Tools: paper valve, flow strip, degree dial, half-open gate, pressure tag.
+
+### Mediator / 调停员
+
+Use for tension, negotiation, two-sided relationship, unresolved balance, or a two-operator scene where forces must stay visible together.
+
+Actions: mediate, hold, separate, align, negotiate, balance.
+
+Tools: paired pull tabs, shared table, counterweight cord, neutral frame, tension pins.
+
+### Pulse Reader / 测脉员
+
+Use for signal, metric, feedback, hidden reading, system health, mood trace, or weak early warning.
+
+Actions: read, trace, measure, surface, mark, adjust.
+
+Tools: signal gauge, pulse strip, tiny meter, evidence dots, reading lens.
+
+## Operator × Relationship Map
+
+Use `references/relationship-grammar.md` before choosing an operator. Pick the relation first, then choose the operator that can physically perform it.
+
+| Relation | Operator family | Key tool |
+| --- | --- | --- |
+| Connection / 连接 | Thread Runner / 牵线员, Weaver / 编织员 | blue ribbon |
+| Sequence & Handoff / 顺序·交接 | Bridge Relay / 接力员 | handoff tray |
+| Dependency / 依赖 | Stack Mason / 搭层员, Anchor Pin / 定位员 | support slab |
+| Causality & Trigger / 因果·触发 | Gate Builder / 闸门员, Valve Keeper / 阀门员 | latch |
+| Feedback Loop / 反馈环 | Pulse Reader / 测脉员, Valve Keeper / 阀门员 | signal gauge |
+| Contrast & Opposition / 对比·对立 | Mirror Comparator / 对照员, Lens Keeper / 检视员 | split frame |
+| Tradeoff & Balance / 权衡·取舍 | Tradeoff Weigher / 权衡员, Mediator / 调停员 | paper scale |
+| Hierarchy & Containment / 层级·包含 | Stack Mason / 搭层员, Cartographer / 制图员 | nested tray |
+| Transformation & State Change / 转化·状态迁移 | Gate Builder / 闸门员, Color Tuner / 调色员 | converter gate |
+| Boundary, Filter & Threshold / 边界·过滤·门槛 | Boundary Keeper / 边界员, Valve Keeper / 阀门员 | soft gate |
+| Divergence & Convergence / 分流·汇聚 | Weaver / 编织员, Cartographer / 制图员 | braided ribbon |
+| Tension & Equilibrium / 张力·均衡 | Mediator / 调停员, Anchor Pin / 定位员 | paired pull tabs |
+
+## Two-Operator Scenes
+
+Use two operators only when the relation is between two parties and one operator would hide the structure: negotiation, tension, mirrored comparison, handoff, or mutual dependency.
+
+Rules:
+
+- Keep one focal action.
+- Keep both operators faceless, folded-paper, and smaller than the relationship object.
+- Let each operator hold one side of the relation: pull tab, handoff tray, mirror frame, scale side, or shared thread.
+- Do not turn the image into a cast of characters.
+
+Regenerate if the two operators only add charm, conversation, or symmetry without clarifying the relation.
+
+## Action Verb Bank Extension
+
+Relationship-precise verbs:
+
+Connection / 连接:
+
+- link
+- tether
+- anchor
+- splice
+- reconnect
+
+Sequence & handoff / 顺序·交接:
+
+- pass
+- receive
+- relay
+- transfer
+- stage
+
+Contrast / 对比:
+
+- mirror
+- split
+- match
+- oppose
+- differentiate
+
+Transform / 转化:
+
+- convert
+- fold-through
+- re-state
+- repair-into
+- mature
+
+Regulate / 调节:
+
+- throttle
+- meter
+- release
+- dampen
+- filter
+
+Converge / 汇聚:
+
+- braid
+- gather
+- merge
+- synthesize
+- collect
+
+Tension / 张力:
+
+- hold
+- counterpull
+- suspend
+- mediate
+- stabilize
