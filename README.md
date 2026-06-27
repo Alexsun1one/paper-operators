@@ -64,6 +64,15 @@ Paper Operators 想要的是另一种状态：
   <br><sub><strong>生活与心理。</strong>边界屏风把房间一分为二，把压力放在外面，给关系留出可以呼吸的余地。</sub>
 </p>
 
+### v2 · 灵活与精准：一张图，四次渡水
+
+不是每个多步骤故事都要拆成一组图。四渡赤水的精妙就在于**在同一条河上反复渡四次**——把四次渡水画进**同一张地形图**，比拆成 4 张更精准、更醒目：红军路线四次跨越赤水（①一渡西进 ②二渡东返取遵义 ③三渡西渡佯动 ④四渡东渡南下·突围），敌军包围圈、突围方向、金沙江一眼看全。这就是 v2 新增的**构图智能**（单图多步 vs 系列）+ **精准贴合内容**——能换到别的文章上还不违和的图，就是不够精准。
+
+<p align="center">
+  <img src="examples/images/readme/v2-sidu-onemap.jpg" alt="一图四渡·四渡赤水" width="100%">
+  <br><sub><strong>一张图承载四次渡水。</strong>同一张水墨折纸地形沙盘上，红色军路四次跨越赤水、敌环被调动撕开、指挥员侧脸指点——单图多拍，而非四张分图。</sub>
+</p>
+
 说明：以上为 1600px 大图预览（已为 GitHub 加载做了压缩），完整高清原图见 [`examples/images/showcase/`](examples/images/showcase/)；更多旧版示例仍保留在 [`examples/images/`](examples/images/)。
 
 ## 适合谁
@@ -132,6 +141,8 @@ QA risks:
 
 - **纸片人可以有表情（用来编码状态）** —— 默认平脸；当需要让读者读出操作员的状态（吃力、凝神、受压、舒展、照料）时，可以给他画上极简手绘表情：两条线当眉/眼、一条线当嘴，侧脸或三七侧、看着手里的活。靠抽象简单避开恐怖谷，不是正对镜头卖萌，也不是小黑的白点眼。
 - **关系要「演」成立体纸场景，不是把图表纸片化** —— 调研沉淀下来的图表/关系词汇是「要表达哪种关系」的清单；成品要用素材排布 + 循环/线条指引 + 纸片人状态 + 真实景深，把图表级的信息量做成一眼看懂、醒目立体、又不拥挤的 3D 场景，而不是一张带纸纹的平面图表图标。
+
+还有一层专门治「用久了千篇一律」——**灵活与精准**（[`intent-reading`](paper-operators/references/intent-reading.md) / [`creative-divergence`](paper-operators/references/creative-divergence.md) / [`composition-modes`](paper-operators/references/composition-modes.md) / [`variation-engine`](paper-operators/references/variation-engine.md)）：先读懂用户**这一份**内容真正想要什么（受众、情绪、立场、那句最该被记住的话），再发散隐喻、选对构图（单图多步 vs 系列），让每张图都为它自己的内容量身定做。判据是 **Swap Test（换文测试）**：如果这张图能换到另一篇同主题文章上还不违和，就说明不够精准，要重画。第一次「哇哦」、用久了「都差不多」，病根是不精准，不是不好看。
 
 ## 接入方式
 

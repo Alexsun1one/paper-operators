@@ -87,6 +87,8 @@ Four ideas give the method its depth. The full reference files live in the repo,
 
 These layers compose: pick the relationship, render it with primitives and state coding, and when there are multiple images, chain them with a shared throughline.
 
+A further layer keeps the output from going stale (`paper-operators/references/intent-reading.md`, `creative-divergence.md`, `composition-modes.md`, `variation-engine.md`): read what THIS document actually wants (audience, feeling, stance, the one sentence to keep), diverge the metaphor before defaulting, choose the right composition (a single dense image with several beats — like four river crossings on one map — vs a series), and build each image around its own content. Apply the **Swap Test**: if the image could move onto a different article on the same topic without anyone noticing, it is not precise enough — regenerate. The drift from first-use "wow" to repeated-use "boring" is a precision failure, not a style problem.
+
 ## Output Contract
 
 For planning, return:

@@ -60,6 +60,15 @@ An article about "going from one person asking, to organizing a team of Agents t
   <br><sub><strong>Life and psychology.</strong> A boundary screen splits the room; the weight stays outside so the relationship has room to breathe.</sub>
 </p>
 
+### v2 · Flexible & precise: one image, four crossings
+
+Not every multi-step story should be split into a set. The genius of 四渡赤水 (the Four Crossings of the Chishui) is that the army crosses the *same* river four times — so all four crossings belong on ONE terrain map, which is more precise and more striking than four separate pictures: the red route crosses the river four times (① west, ② back east to take 遵义, ③ a feint west, ④ east then south to break out toward the 金沙江), with the enemy ring, the breakout, and the rivers all legible at once. This is the new **composition intelligence** (single-image multi-beat vs series) plus **precision to the content** — if an image could move onto a different article unnoticed, it isn't precise enough.
+
+<p align="center">
+  <img src="examples/images/readme/v2-sidu-onemap.jpg" alt="One map, four crossings — 四渡赤水" width="100%">
+  <br><sub><strong>One image carries four crossings.</strong> On a single ink-wash paper terrain, the red route crosses the 赤水 four times, the enemy ring is drawn out and broken, and the commander points from the map edge — a single-image multi-beat composition, not four separate pictures.</sub>
+</p>
+
 Note: the images above are 1600px previews (compressed for GitHub loading); full-resolution originals live in [`examples/images/showcase/`](examples/images/showcase/), and earlier examples remain in [`examples/images/`](examples/images/).
 
 ## Why It Exists
@@ -143,6 +152,8 @@ Two further v2 refinements:
 
 - **The operator may have a face (to encode state).** Plain by default; when the reader needs to feel the operator's state — effort, focus, strain, relief, care — give it a minimal hand-drawn expression: two strokes for brows/eyes, one for the mouth, in profile or three-quarter, looking at the work. Abstract and sparse to avoid the uncanny valley — not a cute grin at the reader, not Xiaohei white-dot eyes.
 - **Stage relationships as scenes, not chart icons.** The researched chart/relationship vocabulary is a list of relations to express, not icons to paper-ify. Build the relation with material arrangement, line or loop guidance, the operator's state, and real depth — chart-level information density in a 3D paper world that reads in one glance, never a flat paper-textured chart icon.
+
+A further layer fights the "feels the same after a while" trap — **flexibility & precision** ([`intent-reading`](paper-operators/references/intent-reading.md) / [`creative-divergence`](paper-operators/references/creative-divergence.md) / [`composition-modes`](paper-operators/references/composition-modes.md) / [`variation-engine`](paper-operators/references/variation-engine.md)): read what THIS document actually wants (audience, feeling, stance, the one sentence to keep), diverge the metaphor, choose the right composition (single-image multi-beat vs series), and build every image around its own content. The test is the **Swap Test**: if an image could move onto a different article on the same topic unnoticed, it isn't precise enough — regenerate. First-use "wow" turning into repeated-use "boring" is a precision failure, not a style problem.
 
 ## Integrations
 
