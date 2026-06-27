@@ -128,16 +128,34 @@ Paper Operators 想要的是另一种状态：
 source anchor:
 reader takeaway:
 domain and mood:
+relationship type:
 core action:
 operator decision:
 what breaks if removed:
 operator family:
 metaphor world:
+primitives and state coding:
 composition:
 labels:
+series plan (规划多张图时):
 final image prompt:
 QA risks:
 ```
+
+## 更深的关系、更全的原元素、更强的串联
+
+这一版把纸片人从「画好一张图」扩展到「精确画出关系，并把多张图串成一条论证」。新增了四层能力，依次取用：
+
+- **关系语法（先定关系）** —— [`paper-operators/references/relationship-grammar.md`](paper-operators/references/relationship-grammar.md)
+  先在 12 种关系里定位文章真正要画的那一种：连接、顺序·交接、依赖、因果·触发、反馈环、对比·对立、权衡·取舍、层级·包含、转化·状态迁移、边界·过滤·门槛、分流·汇聚、张力·均衡。每种关系都给出文章信号、视觉编码、对应 operator、以及一条「从随便一条箭头 → 精确到方向/条件/状态」的精度阶梯。先定关系再选 operator，图才不会塌成一条万能箭头。
+- **原元素套件（搭场景的零件）** —— [`paper-operators/references/primitives.md`](paper-operators/references/primitives.md)
+  把纸世界拆成一套可复用的原件：载体与路径、台面与托件、围合与边界、光学与光、度量与工具、状态容器、标签容器，以及纸片人构造件。一个原件只承担一个含义；同一含义在整组图里复用同一个原件，多张图才像一个世界。
+- **状态编码（精度从这里来）** —— [`paper-operators/references/state-coding.md`](paper-operators/references/state-coding.md)
+  不靠文字也能读出状态、程度、好坏：色彩语义、路径粗细与质感、高度层次、闸门姿态、边缘状态、光与强调、程度与数量。还给了「编码预算」——只让一两种编码承担文章的精度，其余保持中性，复杂也不糊。
+- **串联与图集（把图连成一条论证）** —— [`paper-operators/references/series-and-chaining.md`](paper-operators/references/series-and-chaining.md)
+  一篇文章常需要 2–6 张图。串联层规定：operator、配色、标签风格保持不变；一条蓝色主路径贯穿全集、状态逐张推进（松散→拉紧、杂乱→收拢、暗→亮、沉重→放下）；早早埋一个小母题，到收束图里回收。完整示例见 [`examples/series-prompts.md`](examples/series-prompts.md)。
+
+这四层是组合关系：先定关系，用原元素和状态编码把它画准，多张图时再用一条主路径把它们串起来。
 
 ## 接入方式
 
@@ -233,7 +251,7 @@ Source anchor:
 - 不要画成流程图、漏斗、节点网络
 ```
 
-更多示例见 [`examples/prompts.md`](examples/prompts.md)。
+更多单图示例见 [`examples/prompts.md`](examples/prompts.md)；多图串联系列（产品/AI、艺术评论、生活/心理）见 [`examples/series-prompts.md`](examples/series-prompts.md)。
 
 ## 关注后续
 
@@ -264,6 +282,7 @@ paper-operators/
 │   └── smoke-test.md
 ├── examples/
 │   ├── prompts.md
+│   ├── series-prompts.md
 │   └── images/
 │       └── readme/
 ├── docs/
@@ -272,6 +291,15 @@ paper-operators/
     ├── SKILL.md
     ├── agents/openai.yaml
     ├── references/
+    │   ├── style-dna.md
+    │   ├── relationship-grammar.md
+    │   ├── operator-library.md
+    │   ├── primitives.md
+    │   ├── state-coding.md
+    │   ├── domain-adaptation.md
+    │   ├── series-and-chaining.md
+    │   ├── prompt-template.md
+    │   └── qa-checklist.md
     └── assets/examples/
 ```
 

@@ -34,6 +34,7 @@ paper operator:
 - use operator: yes/no
 - source anchor:
 - domain:
+- relationship type:
 - core action:
 - object acted on:
 - relation clarified:
@@ -43,7 +44,7 @@ paper operator:
 ```
 
 7. Use a paper operator only if `what breaks if removed` is concrete.
-8. Build a high-angle paper-model scene with readable labels.
+8. Build a high-angle paper-model scene with readable labels. When the piece needs more than one image, plan them as a connected series (see Depth Layers).
 9. Generate or plan one image at a time.
 10. Check the output against the QA rules below.
 
@@ -73,6 +74,17 @@ For product, business, or AI writing, use route runners, lens keepers, gates, sc
 For engineering or systems writing, use cutaways, bridges, relay paths, failure branches, repair loops, evidence trays, and interface cards.
 
 Always let the article choose the operator's tool and world. Do not force engineering props into art, culture, life, or emotional essays.
+
+## Depth Layers
+
+Four ideas give the method its depth. The full reference files live in the repo, but the concepts travel on their own.
+
+- **Relationship first.** Before choosing an operator, name the exact relationship the image must show: connection, sequence, dependency, causality, feedback loop, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension. Then render its direction, condition, and state. This is what stops an image from collapsing into a generic left-to-right arrow. (Full grammar: `paper-operators/references/relationship-grammar.md`.)
+- **Primitives as the kit.** Build every scene from a known set of paper parts — carriers and paths, surfaces and holders, enclosures and boundaries, optics and light, measures and tools, state containers, and label containers. One primitive carries one meaning; reuse the same primitive for the same meaning so a set of images feels like one world. (Full kit: `paper-operators/references/primitives.md`.)
+- **State coding for precision.** Show status, degree, and quality without extra text: color semantics, path thickness and texture, elevation, gate posture, edge condition, light, and degree. Keep an encoding budget — pick the one or two encodings that carry the point and let the rest stay neutral. (Full system: `paper-operators/references/state-coding.md`.)
+- **Series for chaining.** When an article needs several images, chain them into one argument: keep the operator, palette, and label style constant, advance one throughline ribbon across the set, and introduce a small motif early that pays off at the end. (Full guide: `paper-operators/references/series-and-chaining.md`; worked examples: `examples/series-prompts.md`.)
+
+These layers compose: pick the relationship, render it with primitives and state coding, and when there are multiple images, chain them with a shared throughline.
 
 ## Output Contract
 

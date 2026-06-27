@@ -112,12 +112,14 @@ Avoid it when:
 
 1. Pick one source anchor from the article.
 2. Decide what the reader should understand after seeing the image.
-3. Choose the domain and mood.
-4. Select a paper operator family.
-5. Answer `what breaks if removed`.
-6. Choose a scene: gallery table, boundary room, paper town, archive desk, route map, cutaway, shelf matrix, or another paper-world setup.
-7. Add readable labels in the user's language.
-8. Generate one image, then check clarity, action, text, composition, and style drift.
+3. Name the core relationship the image must show — connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension — and choose it before the operator.
+4. Choose the domain and mood.
+5. Select a paper operator family that can physically perform the relationship.
+6. Answer `what breaks if removed`.
+7. Build the scene from the primitives kit, and encode status, degree, and state with state coding.
+8. Add readable labels in the user's language.
+9. When the piece needs several images, plan them as a connected series with one progressing throughline.
+10. Generate one image, then check clarity, action, text, composition, relationship precision, and style drift.
 
 Planning output includes:
 
@@ -125,16 +127,34 @@ Planning output includes:
 source anchor:
 reader takeaway:
 domain and mood:
+relationship type:
 core action:
 operator decision:
 what breaks if removed:
 operator family:
 metaphor world:
+primitives and state coding:
 composition:
 labels:
+series plan (only when planning more than one image):
 final image prompt:
 QA risks:
 ```
+
+## Depth Layers
+
+This version extends Paper Operators from "draw one good image" to "render the exact relationship, and chain several images into one argument." Four layers, used in order:
+
+- **Relationship grammar (relationship first)** — [`paper-operators/references/relationship-grammar.md`](paper-operators/references/relationship-grammar.md)
+  Locate the one relationship the article actually needs among 12 families: connection, sequence & handoff, dependency, causality & trigger, feedback loop, contrast & opposition, tradeoff & balance, hierarchy & containment, transformation & state change, boundary/filter/threshold, divergence & convergence, and tension & equilibrium. Each comes with article signals, a visual encoding, the operator that performs it, and a precision ladder from "any old arrow" to "exact direction, condition, and state." Pick the relationship before the operator so the image never collapses into a generic arrow.
+- **Primitives kit (the parts you build from)** — [`paper-operators/references/primitives.md`](paper-operators/references/primitives.md)
+  A reusable set of paper parts: carriers and paths, surfaces and holders, enclosures and boundaries, optics and light, measures and tools, state containers, label containers, and the paper-person construction kit. One primitive carries one meaning; reuse the same primitive for the same meaning so a set of images reads as one world.
+- **State coding (where precision comes from)** — [`paper-operators/references/state-coding.md`](paper-operators/references/state-coding.md)
+  Show status, degree, and quality without extra text: color semantics, path thickness and texture, elevation, gate posture, edge condition, light, and degree. An encoding budget keeps complex scenes legible — only one or two encodings carry the point; the rest stay neutral.
+- **Series & chaining (connect images into one argument)** — [`paper-operators/references/series-and-chaining.md`](paper-operators/references/series-and-chaining.md)
+  Most articles need 2–6 figures. Keep the operator, palette, and label style constant; run one blue throughline ribbon across the set with a progressing state (loose→taut, scattered→sorted, dim→lit, heavy→placed); plant a small motif early and pay it off in the closing image. Worked sets live in [`examples/series-prompts.md`](examples/series-prompts.md).
+
+The layers compose: pick the relationship, render it with primitives and state coding, and chain multiple images with a shared throughline.
 
 ## Integrations
 
@@ -231,7 +251,7 @@ Requirements:
 - do not turn it into a flowchart, funnel, or node network
 ```
 
-More examples live in [`examples/prompts.md`](examples/prompts.md).
+More single-image examples live in [`examples/prompts.md`](examples/prompts.md); multi-image chained series (product/AI, art criticism, life/psychology) live in [`examples/series-prompts.md`](examples/series-prompts.md).
 
 ## Follow The Work
 
@@ -262,6 +282,7 @@ paper-operators/
 │   └── smoke-test.md
 ├── examples/
 │   ├── prompts.md
+│   ├── series-prompts.md
 │   └── images/
 │       └── readme/
 ├── docs/
@@ -270,6 +291,15 @@ paper-operators/
     ├── SKILL.md
     ├── agents/openai.yaml
     ├── references/
+    │   ├── style-dna.md
+    │   ├── relationship-grammar.md
+    │   ├── operator-library.md
+    │   ├── primitives.md
+    │   ├── state-coding.md
+    │   ├── domain-adaptation.md
+    │   ├── series-and-chaining.md
+    │   ├── prompt-template.md
+    │   └── qa-checklist.md
     └── assets/examples/
 ```
 
