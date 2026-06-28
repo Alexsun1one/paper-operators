@@ -28,6 +28,17 @@ The rule is simple: if removing the paper operator does not weaken the image, th
 
 > Every image below was rendered by **Codex**. On the rendering layer today, **Codex gives the best results** — paper texture, dimensional paper models, readable Chinese labels, and operator action all come out most reliably. Handing the `final image prompt` to Codex is the currently recommended way to render.
 
+### Codex · Rendering workshop: from prompt to readable image
+
+<p align="center">
+  <img src="examples/images/readme/v2-codex-rendering-workshop.jpg" alt="Codex rendering workshop: from prompt to finished image" width="100%">
+  <br><sub><strong>Codex rendering workshop.</strong> The prompt rides a blue work ribbon into the Codex paper machine and comes out as an article figure with paper texture, readable labels, and a verification action.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-reasoning-stack.jpg" alt="Paper Operators reasoning stack: from source text to finished image" width="100%">
+  <br><sub><strong>The reasoning stack made visible.</strong> The operator lifts translucent analysis layers, linking source text, intent, relationship, primitives, state, final image, and QA into an inspectable visual production chain.</sub>
+</p>
+
 ### v2 · Chained series: one blue work ribbon, one whole article
 
 An article about "going from one person asking, to organizing a team of Agents to deliver a verifiable result." Four body images share the same thread runner and palette; the blue work ribbon's state advances image to image, and the `校验 / verify` stamp motif goes from "pending" to "stamped." This is the new **series chaining** capability.

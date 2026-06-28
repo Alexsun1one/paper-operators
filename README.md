@@ -32,6 +32,17 @@ Paper Operators 想要的是另一种状态：
 
 > 下面的示例图全部由 **Codex 生图**。就目前的渲染层来看，**Codex 的生图效果最佳**——纸张质感、立体纸模、可读中文标签和操作动作都最稳。把 `final image prompt` 交给 Codex 渲染，是当前最推荐的出图方式。
 
+### Codex · 渲染工坊：从提示词到可读成图
+
+<p align="center">
+  <img src="examples/images/readme/v2-codex-rendering-workshop.jpg" alt="Codex 渲染工坊：从提示词到成图" width="100%">
+  <br><sub><strong>Codex 渲染工坊。</strong>提示词沿蓝色工带进入 Codex 纸模机器，输出带纸张质感、可读标签和校验动作的正文图。</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-reasoning-stack.jpg" alt="Paper Operators 推理层：从原文到成图" width="100%">
+  <br><sub><strong>推理层可视化。</strong>纸片操作员掀开半透明分析层，把「原文 / 意图 / 关系 / 原元素 / 状态 / 成图 / QA」串成一条能被检查的视觉生产链。</sub>
+</p>
+
 ### v2 · 串联系列：一条蓝色工带，串起一整篇文章
 
 一篇「从一个人提问，到组织一群 Agent 交付一条可验证结果」的文章，四张正文图共享同一个牵线员、同一套配色；蓝色工带的状态逐张推进，`校验章` 母题从「待用」一路盖到「已校验」。这正是 v2 新增的**串联**能力。
