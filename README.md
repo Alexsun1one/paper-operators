@@ -12,6 +12,17 @@ This repository includes a ready-to-install Codex Skill, but the method is not C
 
 It is not a mascot pack. It is a visual thinking tool.
 
+## Why Codex Matters Here
+
+Paper Operators is deliberately built around the kind of loop Codex is good at: read source material, improve the workflow, generate candidate prompts, render images, inspect artifacts, tighten rules, and write the lesson back into the repository. Codex is not only a renderer in this project; it acts as the maintainer workstation for a visual reasoning skill.
+
+- **Codex turns the method into a shippable skill.** The repository contains the installable Skill, portable agent guides, showcase assets, smoke prompts, and QA rules rather than a one-off prompt.
+- **Codex makes the visual proof visible.** Every image in the current showcase was rendered through Codex, which has produced the most reliable paper texture, readable labels, and operator action in testing.
+- **Codex helps maintain cross-agent usefulness.** Claude Code, Cursor, Hermes Agent, OpenClaw, and other tools can plan with the workflow; Codex is the preferred path for final rendering and repo maintenance.
+- **API credits would go directly into public OSS examples.** More credits mean more real article, book, product, and education examples, better failure analysis, and stronger reusable rules for people who cannot afford many image-generation retries.
+
+More detail: [`docs/codex-workflow.md`](docs/codex-workflow.md).
+
 <p align="center">
   <img src="examples/images/readme/v2-story-card-christmas-carol.jpg" alt="A Christmas Carol story card" width="100%">
 </p>
@@ -328,6 +339,8 @@ paper-operators/
 │   └── images/
 │       └── readme/
 ├── docs/
+│   ├── codex-for-oss-application.md
+│   ├── codex-workflow.md
 │   └── style-notes.md
 └── paper-operators/
     ├── SKILL.md
