@@ -1,32 +1,39 @@
-# Codex for Open Source Application Draft
+# Codex for Open Source Application
 
 Official form: <https://openai.com/form/codex-for-oss/>
 
 Project: Paper Operators  
 Repository: <https://github.com/Alexsun1one/paper-operators>  
 Current public signal checked on 2026-06-29: 36 GitHub stars, public repo, MIT license.
+Status: submitted through the official OpenAI form on 2026-06-29.
 
-## Form Answers
+## Submitted Form Snapshot
 
-The official form asks for several short answers with a 500 character limit. These versions are intentionally compact.
+The official form asks for several short answers with a 500 character limit. Sensitive account identifiers are not recorded here.
 
-### How are you involved with this project?
+### Role
 
-I am the creator and maintainer of Paper Operators, a public MIT-licensed Codex Skill that turns essays, books, product ideas, and systems into clear paper-stage visual explainers. I maintain the Skill files, examples, README, portable guides for Claude Code/Cursor/other agents, and the public showcase rendered with Codex.
+Primary maintainer.
 
-### How do you plan to use Codex/Codex Security/OpenAI API in this project?
+### Why does this repository qualify?
 
-I use Codex as the maintainer workstation: improve the Skill, plan figures from real writing, generate final image prompts, render examples, inspect artifacts, and write failures back into reusable rules. API credits would fund public examples and smoke tests across articles, story cards, book explainers, product narratives, and multi-image series.
+Paper Operators is a public MIT Codex Skill with 36 GitHub stars, 1 fork, 13 reference files, portable guides for Claude Code/Cursor/other agents, and a Codex-rendered showcase. It helps writers, teachers, and builders move beyond vague AI images into explainable visuals with source anchors, relationship grammar, readable labels, QA, and series control.
 
-### How would support from OpenAI help this project?
+### Interest
 
-The main bottleneck is iteration cost. High-quality visual reasoning needs many prompt/render/review loops to prove what works and turn failures into reusable rules. OpenAI support would let me publish stronger examples, improve Chinese/English docs, test cross-agent compatibility, and make Codex a visible path for creators building practical visual workflows.
+API credits for the project.
+
+### How will API credits be used?
+
+I will use API credits to expand public OSS examples and smoke tests: real essays, book/story cards, product narratives, education explainers, and multi-image series. Codex will drive the loop: source analysis -> final image prompt -> render -> artifact review -> rule/QA writeback. Credits reduce iteration cost and make failures reusable lessons.
 
 ### Anything else to share?
 
-Although the repo is small, it is already useful: 36 stars, a complete Codex Skill, 13 reference files, portable agent guides, and a Codex-rendered showcase. It helps writers and builders move beyond vague AI images into explainable visuals with source anchors, relationship grammar, readable labels, QA, and series control.
+Silicoville is my small, fast-moving AI creation lab: I turn real creator workflows into open, reusable agent skills. If selected, the subscription and credits will go straight into heavy development and maintenance of Paper Operators: more examples, tests, docs, QA data, and failure analyses. I can share non-sensitive learnings, eval notes, and anonymized usage/artifact data with OpenAI.
 
-## Follow-Up Email Draft
+## Follow-Up Email Draft (Not Sent)
+
+This is a backup follow-up draft only. The official form is the submitted application.
 
 Subject: Codex for Open Source application: Paper Operators, a visual reasoning Skill for creators
 
@@ -49,4 +56,3 @@ Thank you for supporting open-source maintainers. I think this project is a smal
 
 Best,  
 Sun
-
