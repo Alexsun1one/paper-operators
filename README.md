@@ -1,119 +1,162 @@
-# Paper Operators / 纸片人
+# Paper Operators
 
-> 一个中文优先的 Agent 配图工作流：把文章里的判断、转折和复杂关系，变成清楚、好看、有动作感的纸片人正文配图。
+> Turn essays, books, stories, and systems into clear tactile visual cards, with a small paper operator physically performing the idea.
 
-[English](README.en.md)
+[中文](README.zh.md)
 
-Paper Operators 面向写作者、产品人、研究者、教师、创作者，以及所有需要把复杂想法讲清楚的人。它不是一个「可爱小人」画风包，而是一套可以迁移到多种 Agent 工具里的文章配图工作流：先读懂文章里真正值得画的那句话，再让纸片人亲手完成关键动作。
+Paper Operators is built for people who write, explain, publish, teach, ship products, or make sense of complicated ideas. It turns a source paragraph, a book chapter, a story arc, or a product concept into a 16:9 paper-stage image where a small folded-paper operator performs the core action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, or repairing.
 
-这个仓库里已经提供了 Codex Skill 版本，但方法本身不依赖 Codex。Claude Code、Cursor、Hermes Agent、OpenClaw，或任何支持项目规则 / 自定义指令 / 工作流提示词的 Agent，都可以使用同一套规则。
+It is not just a "make images for slides" prompt pack. It is a visual reasoning workflow. You can use it for article figures, story cards, book explainers, product narratives, learning cards, and multi-image editorial series.
 
-纸片人会装框、捕光、牵线、检视、开闸、照料、称重、归档、修补。它不是站在旁边卖萌，而是在图里把抽象概念做出来。
+This repository includes a ready-to-install Codex Skill, but the method is not Codex-only. Claude Code, Cursor, Hermes Agent, OpenClaw, or any agent tool that supports project rules, custom instructions, or workflow prompts can use the same guide.
 
-<p align="center">
-  <img src="examples/images/readme/v2-life-boundary.jpg" alt="把情绪放回合适的位置" width="100%">
-</p>
-
-## 它解决什么问题
-
-很多 AI 文章配图会掉进两个坑：要么好看但空泛，要么清楚但像 PPT。
-
-Paper Operators 想要的是另一种状态：
-
-- 读者三秒内知道这张图在讲什么
-- 画面有纸张、器具、路径和动作，不是冰冷图标
-- 中文标签默认可读，不再只给空白占位框
-- 同一篇文章里的多张图风格统一，但每张图又贴合自己的段落
-- 角色只在有用时出现，不能为了可爱而硬塞
-
-一句话判断：如果把纸片人拿掉，图还是同样清楚，那这张图就不该画纸片人。
-
-## 效果展示
-
-> 下面的示例图全部由 **Codex 生图**。就目前的渲染层来看，**Codex 的生图效果最佳**——纸张质感、立体纸模、可读中文标签和操作动作都最稳。把 `final image prompt` 交给 Codex 渲染，是当前最推荐的出图方式。
-
-### Codex · 渲染工坊：从提示词到可读成图
+It is not a mascot pack. It is a visual thinking tool.
 
 <p align="center">
-  <img src="examples/images/readme/v2-codex-rendering-workshop.jpg" alt="Codex 渲染工坊：从提示词到成图" width="100%">
-  <br><sub><strong>Codex 渲染工坊。</strong>提示词沿蓝色工带进入 Codex 纸模机器，输出带纸张质感、可读标签和校验动作的正文图。</sub>
-</p>
-<p align="center">
-  <img src="examples/images/readme/v2-reasoning-stack.jpg" alt="Paper Operators 推理层：从原文到成图" width="100%">
-  <br><sub><strong>推理层可视化。</strong>纸片操作员掀开半透明分析层，把「原文 / 意图 / 关系 / 原元素 / 状态 / 成图 / QA」串成一条能被检查的视觉生产链。</sub>
+  <img src="examples/images/readme/v2-story-card-christmas-carol.jpg" alt="A Christmas Carol story card" width="100%">
 </p>
 
-### v2 · 串联系列：一条蓝色工带，串起一整篇文章
+## What This Skill Does
 
-一篇「从一个人提问，到组织一群 Agent 交付一条可验证结果」的文章，四张正文图共享同一个牵线员、同一套配色；蓝色工带的状态逐张推进，`校验章` 母题从「待用」一路盖到「已校验」。这正是 v2 新增的**串联**能力。
+- Finds the sentence, conflict, turn, plot beat, or judgment worth visualizing.
+- Converts abstract structure into physical paper action: reveal, route, weigh, frame, filter, repair, archive, or transform.
+- Chooses a paper-world metaphor that fits the domain: literature, culture, life, product, business, engineering, AI, education, psychology, and more.
+- Produces readable Chinese or English labels by default, instead of empty label boxes.
+- Keeps a consistent visual language across a whole package without making every image look the same.
 
-<p align="center">
-  <img src="examples/images/readme/v2-series-1.jpg" alt="开场·问答" width="100%">
-  <br><sub><strong>① 开场 · 问答。</strong>牵线员把松散的蓝色工带从「想法 / 提问 / 意图」卡上拉起，路线待路由，校验章待用。</sub>
-</p>
-<p align="center">
-  <img src="examples/images/readme/v2-series-2.jpg" alt="展开·分工" width="100%">
-  <br><sub><strong>② 展开 · 分工。</strong>同一条工带被拉紧、分流到 Agent A / B / C，意图变成可并行的工作段。</sub>
-</p>
-<p align="center">
-  <img src="examples/images/readme/v2-series-3.jpg" alt="转折·校验" width="100%">
-  <br><sub><strong>③ 转折 · 校验。</strong>产出过检视镜，风险用珊瑚色分支标出（状态编码），校验章仍待盖印。</sub>
-</p>
-<p align="center">
-  <img src="examples/images/readme/v2-series-4.jpg" alt="收束·交付" width="100%">
-  <br><sub><strong>④ 收束 · 交付。</strong>工带穿过校验闸门落入交付托盘，校验章盖在「结果」上变成「已校验」——母题回收，论证收口。</sub>
-</p>
+The rule is simple: if removing the paper operator does not weaken the image, the operator should not be there.
 
-### 跨领域大图：不只画工作流
+## Showcase
+
+> Every image below was rendered by **Codex**. On the rendering layer today, **Codex gives the best results** — paper texture, dimensional paper models, readable labels, and operator action all come out most reliably. Handing the `final image prompt` to Codex is the currently recommended way to render.
+
+### Story Cards · Understand a classic in one glance
+
+Paper Operators is not limited to presentation graphics. It can compress a familiar book or story into a fast-readable visual card: character, conflict, turning points, consequence, and transformation.
 
 <p align="center">
-  <img src="examples/images/readme/v2-art-attention.jpg" alt="艺术·把注意力放到正确的位置" width="100%">
-  <br><sub><strong>艺术与审美。</strong>装框员对齐空框、举光卡、留白：「把注意力放到正确的位置」。蓝色只用在框内焦点上。</sub>
-</p>
-<p align="center">
-  <img src="examples/images/readme/v2-life-boundary.jpg" alt="生活·边界与余地" width="100%">
-  <br><sub><strong>生活与心理。</strong>边界屏风把房间一分为二，把压力放在外面，给关系留出可以呼吸的余地。</sub>
+  <img src="examples/images/readme/v2-story-card-christmas-carol.jpg" alt="A Christmas Carol story card" width="100%">
+  <br><sub><strong>A Christmas Carol as a story card.</strong> Scrooge moves through Past, Present, Future, Choice, Change, and Generosity. The blue ribbon carries the plot; the warm lantern marks the moral transformation.</sub>
 </p>
 
-### v2 · 灵活与精准：一张图，四次渡水
-
-不是每个多步骤故事都要拆成一组图。四渡赤水的精妙就在于**在同一条河上反复渡四次**——把四次渡水画进**同一张地形图**，比拆成 4 张更精准、更醒目：红军路线四次跨越赤水（①一渡西进 ②二渡东返取遵义 ③三渡西渡佯动 ④四渡东渡南下·突围），敌军包围圈、突围方向、金沙江一眼看全。这就是 v2 新增的**构图智能**（单图多步 vs 系列）+ **精准贴合内容**——能换到别的文章上还不违和的图，就是不够精准。
+### Visual Reasoning · From source text to image
 
 <p align="center">
-  <img src="examples/images/readme/v2-sidu-onemap.jpg" alt="一图四渡·四渡赤水" width="100%">
-  <br><sub><strong>一张图承载四次渡水。</strong>同一张水墨折纸地形沙盘上，红色军路四次跨越赤水、敌环被调动撕开、指挥员侧脸指点——单图多拍，而非四张分图。</sub>
+  <img src="examples/images/readme/v2-visual-reasoning-engine.jpg" alt="Visual reasoning engine" width="100%">
+  <br><sub><strong>Visual reasoning engine.</strong> The operator reveals the hidden relation inside the source, then routes it through intent, primitives, state, image, and QA.</sub>
 </p>
 
-说明：以上为 1600px 大图预览（已为 GitHub 加载做了压缩），完整高清原图见 [`examples/images/showcase/`](examples/images/showcase/)；更多旧版示例仍保留在 [`examples/images/`](examples/images/)。
+### One Grammar · Many worlds
 
-## 适合谁
+<p align="center">
+  <img src="examples/images/readme/v2-cross-domain-grammar.jpg" alt="Same grammar, new world" width="100%">
+  <br><sub><strong>Same grammar, new world.</strong> The same operator logic travels across art, business, life, and AI without collapsing into a single workflow template.</sub>
+</p>
 
-适合：
+### Series Control · One argument across many images
 
-- 公众号、博客、newsletter、长文作者
-- 产品、AI、商业、工程、教育、研究类内容
-- 艺术评论、文化文章、个人经验、心理和生活类文章
-- 需要「有人在做这件事」而不是只有箭头和方框的解释图
-- 想为一篇文章生成一组统一但不单调的正文图
+<p align="center">
+  <img src="examples/images/readme/v2-series-control.jpg" alt="Series control: idea route check deliver" width="100%">
+  <br><sub><strong>Series control.</strong> A blue ribbon carries one narrative through Idea, Route, Check, and Deliver, so a whole set reads as one argument rather than unrelated pictures.</sub>
+</p>
 
-不适合：
+### Codex · Rendering workshop
 
-- 只需要 logo、贴纸、表情包或装饰性 mascot
-- 一张普通截图、表格或图表就能说清楚的内容
-- 纸片人只能站在旁边凑气氛，不能参与核心动作的场景
+<p align="center">
+  <img src="examples/images/readme/v2-codex-rendering-workshop.jpg" alt="Codex rendering workshop: from prompt to finished image" width="100%">
+  <br><sub><strong>Codex rendering workshop.</strong> The prompt rides a blue work ribbon into the Codex paper machine and comes out as an article figure with paper texture, readable labels, and a verification action.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-reasoning-stack.jpg" alt="Paper Operators reasoning stack: from source text to finished image" width="100%">
+  <br><sub><strong>The reasoning stack made visible.</strong> The operator lifts translucent analysis layers, linking source text, intent, relationship, primitives, state, final image, and QA into an inspectable visual production chain.</sub>
+</p>
 
-## 工作流
+### v2 · Chained series: one blue work ribbon, one whole article
 
-1. 从文章里找出最值得画的 source anchor：一句话、一个转折、一个冲突或一个判断。
-2. 写清楚读者看完图应该明白什么。
-3. 判断领域和语气：艺术、文化、生活、产品、商业、工程、教育、心理等。
-4. 选择纸片人的动作：装框、捕光、牵线、检视、开闸、照料、称重、归档、修补。
-5. 回答 `what breaks if removed`，确认纸片人不是装饰。
-6. 选择纸模世界：画廊工作台、边界房间、纸片小镇、档案桌、路线图、剖面图、货架矩阵等。
-7. 写出短而可读的中文标签。
-8. 生成一张图，并检查清晰度、动作、文字、构图和风格漂移。
+An article about "going from one person asking, to organizing a team of Agents to deliver a verifiable result." Four body images share the same thread runner and palette; the blue work ribbon's state advances image to image, and the `校验 / verify` stamp motif goes from "pending" to "stamped." This is the new **series chaining** capability.
 
-规划输出通常长这样：
+<p align="center">
+  <img src="examples/images/readme/v2-series-1.jpg" alt="Opening · the question" width="100%">
+  <br><sub><strong>① Opening · the question.</strong> The operator pulls a loose blue ribbon off the idea/question/intent cards; the route is unrouted, the verify stamp is pending.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-2.jpg" alt="Build · delegation" width="100%">
+  <br><sub><strong>② Build · delegation.</strong> The same ribbon, now taut, branches to Agents A / B / C — intent becomes parallel work.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-3.jpg" alt="Turn · verification" width="100%">
+  <br><sub><strong>③ Turn · verification.</strong> Output passes under the inspection lens; risk is marked on a coral branch (state coding); the stamp is still unstamped.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-series-4.jpg" alt="Resolution · delivery" width="100%">
+  <br><sub><strong>④ Resolution · delivery.</strong> The ribbon passes the verify gate into the delivery tray; the stamp lands on the result card — motif paid off, argument closed.</sub>
+</p>
+
+### Range: not only workflows
+
+<p align="center">
+  <img src="examples/images/readme/v2-art-attention.jpg" alt="Art · placing attention" width="100%">
+  <br><sub><strong>Art and aesthetics.</strong> A frame setter aligns an empty frame, holds a light card, keeps negative space: "place attention in the right place." Blue is reserved for the one focus.</sub>
+</p>
+<p align="center">
+  <img src="examples/images/readme/v2-life-boundary.jpg" alt="Life · boundary and room" width="100%">
+  <br><sub><strong>Life and psychology.</strong> A boundary screen splits the room; the weight stays outside so the relationship has room to breathe.</sub>
+</p>
+
+### v2 · Flexible & precise: one image, four crossings
+
+Not every multi-step story should be split into a set. The genius of 四渡赤水 (the Four Crossings of the Chishui) is that the army crosses the *same* river four times — so all four crossings belong on ONE terrain map, which is more precise and more striking than four separate pictures: the red route crosses the river four times (① west, ② back east to take 遵义, ③ a feint west, ④ east then south to break out toward the 金沙江), with the enemy ring, the breakout, and the rivers all legible at once. This is the new **composition intelligence** (single-image multi-beat vs series) plus **precision to the content** — if an image could move onto a different article unnoticed, it isn't precise enough.
+
+<p align="center">
+  <img src="examples/images/readme/v2-sidu-onemap.jpg" alt="One map, four crossings — 四渡赤水" width="100%">
+  <br><sub><strong>One image carries four crossings.</strong> On a single ink-wash paper terrain, the red route crosses the 赤水 four times, the enemy ring is drawn out and broken, and the commander points from the map edge — a single-image multi-beat composition, not four separate pictures.</sub>
+</p>
+
+Note: the images above are 1600px previews (compressed for GitHub loading); full-resolution originals live in [`examples/images/showcase/`](examples/images/showcase/), and earlier examples remain in [`examples/images/`](examples/images/).
+
+## Why It Exists
+
+Most AI-generated article images fail in one of two ways: they are pretty but vague, or they are clear but look like a slide deck.
+
+Paper Operators tries to sit in the better middle:
+
+- clear enough to explain the idea in three seconds
+- warm enough that readers want to keep looking
+- structured enough to support long-form writing
+- distinctive enough to make a publication feel owned
+
+The style borrows the discipline of diagrams, the warmth of paper craft, and the editorial restraint of a good magazine figure. It does not copy Xiaohei-style black figures, white-dot eyes, blob mascots, generic stick people, robots, stock icons, or PPT infographics.
+
+## When To Use It
+
+Use Paper Operators for:
+
+- WeChat articles, blogs, newsletters, and long-form essays
+- product thinking, AI workflows, business judgment, engineering notes
+- art criticism, cultural essays, personal writing, psychology, education
+- explainers that need more humanity than arrows and boxes
+- visual packages where several images should feel related
+
+Avoid it when:
+
+- the image only needs a logo, icon, sticker, or decorative mascot
+- a simple chart or screenshot would explain the point better
+- the operator would stand beside the idea instead of acting on it
+
+## How It Works
+
+1. Pick one source anchor from the article.
+2. Decide what the reader should understand after seeing the image.
+3. Name the core relationship the image must show — connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension — and choose it before the operator.
+4. Choose the domain and mood.
+5. Select a paper operator family that can physically perform the relationship.
+6. Answer `what breaks if removed`.
+7. Build the scene from the primitives kit, and encode status, degree, and state with state coding.
+8. Add readable labels in the user's language.
+9. When the piece needs several images, plan them as a connected series with one progressing throughline.
+10. Generate one image, then check clarity, action, text, composition, relationship precision, and style drift.
+
+Planning output includes:
 
 ```text
 source anchor:
@@ -128,140 +171,141 @@ metaphor world:
 primitives and state coding:
 composition:
 labels:
-series plan (规划多张图时):
+series plan (only when planning more than one image):
 final image prompt:
 QA risks:
 ```
 
-## 更深的关系、更全的原元素、更强的串联
+## Depth Layers
 
-这一版把纸片人从「画好一张图」扩展到「精确画出关系，并把多张图串成一条论证」。新增了四层能力，依次取用：
+This version extends Paper Operators from "draw one good image" to "render the exact relationship, and chain several images into one argument." Four layers, used in order:
 
-- **关系语法（先定关系）** —— [`paper-operators/references/relationship-grammar.md`](paper-operators/references/relationship-grammar.md)
-  先在 12 种关系里定位文章真正要画的那一种：连接、顺序·交接、依赖、因果·触发、反馈环、对比·对立、权衡·取舍、层级·包含、转化·状态迁移、边界·过滤·门槛、分流·汇聚、张力·均衡。每种关系都给出文章信号、视觉编码、对应 operator、以及一条「从随便一条箭头 → 精确到方向/条件/状态」的精度阶梯。先定关系再选 operator，图才不会塌成一条万能箭头。
-- **原元素套件（搭场景的零件）** —— [`paper-operators/references/primitives.md`](paper-operators/references/primitives.md)
-  把纸世界拆成一套可复用的原件：载体与路径、台面与托件、围合与边界、光学与光、度量与工具、状态容器、标签容器，以及纸片人构造件。一个原件只承担一个含义；同一含义在整组图里复用同一个原件，多张图才像一个世界。
-- **状态编码（精度从这里来）** —— [`paper-operators/references/state-coding.md`](paper-operators/references/state-coding.md)
-  不靠文字也能读出状态、程度、好坏：色彩语义、路径粗细与质感、高度层次、闸门姿态、边缘状态、光与强调、程度与数量。还给了「编码预算」——只让一两种编码承担文章的精度，其余保持中性，复杂也不糊。
-- **串联与图集（把图连成一条论证）** —— [`paper-operators/references/series-and-chaining.md`](paper-operators/references/series-and-chaining.md)
-  一篇文章常需要 2–6 张图。串联层规定：operator、配色、标签风格保持不变；一条蓝色主路径贯穿全集、状态逐张推进（松散→拉紧、杂乱→收拢、暗→亮、沉重→放下）；早早埋一个小母题，到收束图里回收。完整示例见 [`examples/series-prompts.md`](examples/series-prompts.md)。
+- **Relationship grammar (relationship first)** — [`paper-operators/references/relationship-grammar.md`](paper-operators/references/relationship-grammar.md)
+  Locate the one relationship the article actually needs among 12 families: connection, sequence & handoff, dependency, causality & trigger, feedback loop, contrast & opposition, tradeoff & balance, hierarchy & containment, transformation & state change, boundary/filter/threshold, divergence & convergence, and tension & equilibrium. Each comes with article signals, a visual encoding, the operator that performs it, and a precision ladder from "any old arrow" to "exact direction, condition, and state." Pick the relationship before the operator so the image never collapses into a generic arrow.
+- **Primitives kit (the parts you build from)** — [`paper-operators/references/primitives.md`](paper-operators/references/primitives.md)
+  A reusable set of paper parts: carriers and paths, surfaces and holders, enclosures and boundaries, optics and light, measures and tools, state containers, label containers, and the paper-person construction kit. One primitive carries one meaning; reuse the same primitive for the same meaning so a set of images reads as one world.
+- **State coding (where precision comes from)** — [`paper-operators/references/state-coding.md`](paper-operators/references/state-coding.md)
+  Show status, degree, and quality without extra text: color semantics, path thickness and texture, elevation, gate posture, edge condition, light, and degree. An encoding budget keeps complex scenes legible — only one or two encodings carry the point; the rest stay neutral.
+- **Series & chaining (connect images into one argument)** — [`paper-operators/references/series-and-chaining.md`](paper-operators/references/series-and-chaining.md)
+  Most articles need 2–6 figures. Keep the operator, palette, and label style constant; run one blue throughline ribbon across the set with a progressing state (loose→taut, scattered→sorted, dim→lit, heavy→placed); plant a small motif early and pay it off in the closing image. Worked sets live in [`examples/series-prompts.md`](examples/series-prompts.md).
 
-这四层是组合关系：先定关系，用原元素和状态编码把它画准，多张图时再用一条主路径把它们串起来。
+The layers compose: pick the relationship, render it with primitives and state coding, and chain multiple images with a shared throughline.
 
-此外，v2 还细化了两条：
+Two further v2 refinements:
 
-- **纸片人可以有表情（用来编码状态）** —— 默认平脸；当需要让读者读出操作员的状态（吃力、凝神、受压、舒展、照料）时，可以给他画上极简手绘表情：两条线当眉/眼、一条线当嘴，侧脸或三七侧、看着手里的活。靠抽象简单避开恐怖谷，不是正对镜头卖萌，也不是小黑的白点眼。
-- **关系要「演」成立体纸场景，不是把图表纸片化** —— 调研沉淀下来的图表/关系词汇是「要表达哪种关系」的清单；成品要用素材排布 + 循环/线条指引 + 纸片人状态 + 真实景深，把图表级的信息量做成一眼看懂、醒目立体、又不拥挤的 3D 场景，而不是一张带纸纹的平面图表图标。
+- **The operator may have a face (to encode state).** Plain by default; when the reader needs to feel the operator's state — effort, focus, strain, relief, care — give it a minimal hand-drawn expression: two strokes for brows/eyes, one for the mouth, in profile or three-quarter, looking at the work. Abstract and sparse to avoid the uncanny valley — not a cute grin at the reader, not Xiaohei white-dot eyes.
+- **Stage relationships as scenes, not chart icons.** The researched chart/relationship vocabulary is a list of relations to express, not icons to paper-ify. Build the relation with material arrangement, line or loop guidance, the operator's state, and real depth — chart-level information density in a 3D paper world that reads in one glance, never a flat paper-textured chart icon.
 
-还有一层专门治「用久了千篇一律」——**灵活与精准**（[`intent-reading`](paper-operators/references/intent-reading.md) / [`creative-divergence`](paper-operators/references/creative-divergence.md) / [`composition-modes`](paper-operators/references/composition-modes.md) / [`variation-engine`](paper-operators/references/variation-engine.md)）：先读懂用户**这一份**内容真正想要什么（受众、情绪、立场、那句最该被记住的话），再发散隐喻、选对构图（单图多步 vs 系列），让每张图都为它自己的内容量身定做。判据是 **Swap Test（换文测试）**：如果这张图能换到另一篇同主题文章上还不违和，就说明不够精准，要重画。第一次「哇哦」、用久了「都差不多」，病根是不精准，不是不好看。
+A further layer fights the "feels the same after a while" trap — **flexibility & precision** ([`intent-reading`](paper-operators/references/intent-reading.md) / [`creative-divergence`](paper-operators/references/creative-divergence.md) / [`composition-modes`](paper-operators/references/composition-modes.md) / [`variation-engine`](paper-operators/references/variation-engine.md)): read what THIS document actually wants (audience, feeling, stance, the one sentence to keep), diverge the metaphor, choose the right composition (single-image multi-beat vs series), and build every image around its own content. The test is the **Swap Test**: if an image could move onto a different article on the same topic unnoticed, it isn't precise enough — regenerate. First-use "wow" turning into repeated-use "boring" is a precision failure, not a style problem.
 
-## 接入方式
+## Integrations
 
 ### Codex
 
-把 Skill 目录复制到 Codex skills 目录：
+Copy the Skill directory into your Codex skills folder:
 
 ```bash
 mkdir -p ~/.codex/skills
 cp -R paper-operators ~/.codex/skills/paper-operators
 ```
 
-重启 Codex 后即可使用：
+Restart Codex, then call it by name:
 
 ```text
-用 $paper-operators 给这篇文章规划 3 张正文配图，先不要生成图。
+Use $paper-operators to plan three article body illustrations for this essay. Do not generate images yet.
 ```
 
-也可以直接生成一张：
+Or generate one image directly:
 
 ```text
-用 $paper-operators 根据下面这段文字生成一张 16:9 正文配图。
+Use $paper-operators to generate a 16:9 article body illustration from the paragraph below.
 
-文字：
-好的审美不是装饰，而是把注意力放到正确的位置。
+Text:
+Good taste is not decoration. It is placing attention in the right place.
 ```
 
-### 其他 Agent 工具
+### Other Agent Tools
 
-如果你用的是 Claude Code、Cursor、Hermes Agent、OpenClaw 或其他 Agent 工具，不需要强行套 Codex Skill 格式。
+If you use Claude Code, Cursor, Hermes Agent, OpenClaw, or another agent tool, you do not need to force it into the Codex Skill format.
 
-使用这个通用指令包即可：
+Use this portable instruction pack:
 
 [`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md)
 
-推荐接法：
+Suggested mapping:
 
-| 工具 | 接入方式 |
+| Tool | How to use it |
 | --- | --- |
-| Claude Code | 使用 [`agent-guides/claude-code.md`](agent-guides/claude-code.md)，或把通用指令包摘到对应项目的 `CLAUDE.md`。 |
-| Cursor | 使用 [`agent-guides/cursor-rule.mdc`](agent-guides/cursor-rule.mdc)，或把通用指令包改成 project rule。 |
-| Hermes Agent | 作为可复用 workflow prompt / agent instruction。 |
-| OpenClaw | 作为自定义 workflow 或项目级 Agent 指令。 |
-| 其他 Agent | 只要支持 system / project / task instruction，就可以贴入通用指令包。 |
+| Claude Code | Use [`agent-guides/claude-code.md`](agent-guides/claude-code.md), or paste the portable guide into the relevant `CLAUDE.md` section. |
+| Cursor | Use [`agent-guides/cursor-rule.mdc`](agent-guides/cursor-rule.mdc), or adapt the portable guide into a project rule. |
+| Hermes Agent | Use it as a reusable workflow prompt / agent instruction. |
+| OpenClaw | Use it as a custom workflow or project-level agent instruction. |
+| Other agents | Paste it wherever the tool accepts system, project, or task instructions. |
 
-核心不是工具名，而是这条链路：`source anchor -> reader takeaway -> operator inclusion test -> domain adaptation -> final prompt -> QA`。
+The important chain is: `source anchor -> reader takeaway -> operator inclusion test -> domain adaptation -> final prompt -> QA`.
 
-Hermes Agent 和 OpenClaw 应该都可以使用这套方法：把 [`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md) 作为 workflow prompt / 项目级指令给它们即可。它们不需要识别 Codex Skill 格式，只要能遵循普通 Markdown 指令，就能完成文章分析、构图规划、标签设计和最终提示词输出。
+Hermes Agent and OpenClaw should be able to use this method as long as they can read or paste ordinary project instructions. Give them [`agent-guides/paper-operators-agent.md`](agent-guides/paper-operators-agent.md) as a workflow prompt or project-level instruction. They do not need to understand the Codex Skill package format to perform article analysis, composition planning, label design, and final prompt generation.
 
-需要注意：跨 Agent 复用的是分析、构图和提示词工作流；最终成图质量仍取决于图像模型。**就目前实测，Codex 的生图效果最佳**（本仓库「效果展示」里的样图都由 Codex 生成），所以最推荐的链路是：用任意 Agent 跑工作流产出 `final image prompt`，再把它交给 Codex 渲染。Claude Code、Cursor、Hermes Agent、OpenClaw 也都可以负责规划和生成最终提示词；如果它们当前没有强生图能力，就把 `final image prompt` 交给 Codex 或其他更强的图像模型渲染。具体兼容性见 [`agent-guides/compatibility.md`](agent-guides/compatibility.md)，也可以用 [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) 测试一个新 Agent 是否真的理解了这套工作流。
+Important: what transfers across agents is the analysis, composition, and prompt workflow. Final image quality still depends on the image model. **In practice, Codex gives the best rendering results today** (every image in the Showcase section above was rendered by Codex), so the recommended path is: run the workflow in any agent to produce the `final image prompt`, then hand it to Codex to render. Claude Code, Cursor, Hermes Agent, and OpenClaw can all plan the figure and produce the final renderer prompt; if they do not have a strong image model available, hand that prompt to Codex or another strong renderer. See [`agent-guides/compatibility.md`](agent-guides/compatibility.md), and use [`agent-guides/smoke-test.md`](agent-guides/smoke-test.md) to check whether a new agent actually follows the workflow.
 
-## 示例提示词
+## Example Prompts
 
-规划一篇文章的图包：
+Plan an article package:
 
 ```text
-用 $paper-operators 给下面这篇文章规划 3 张正文配图，先不要生成图。
+Use $paper-operators to plan three article body illustrations for the following essay. Do not generate images yet.
 
-要求：
-- 中文读者优先
-- 每张图都给 source anchor、reader takeaway、operator family、what breaks if removed
-- 至少一张不是工程/产品图，要贴合文章领域
+Requirements:
+- Chinese readers first
+- For each image, include source anchor, reader takeaway, operator family, and what breaks if removed
+- At least one image should not be an engineering/product diagram; adapt it to the essay's domain
 
-文章：
+Essay:
 {paste article}
 ```
 
-生成产品 / AI 系统配图：
+Generate a product or AI system image:
 
 ```text
-用 $paper-operators 生成一张产品/AI 系统配图。
+Use $paper-operators to generate a product / AI system illustration.
 
 Source anchor:
-我不是在问一个 AI，而是在组织一群 AI 完成一条可验证的路线。
+I am not asking one AI. I am organizing a group of AIs to complete a verifiable route.
 
-要求：
-- operator family 选 Thread Runner + Lens Keeper
-- 高空纸模城镇/工作台，蓝色路径从想法穿过 AI 团队、检查点、上线场景
-- 必须出现短中文标签：想法、团队、校验、上线
+Requirements:
+- operator family: Thread Runner + Lens Keeper
+- high-angle paper town / workbench
+- a blue route from idea to AI team, checkpoint, and launch scene
+- include short Chinese labels: 想法, 团队, 校验, 上线
 ```
 
-生成艺术评论配图：
+Generate an art essay image:
 
 ```text
-用 $paper-operators 生成一张艺术评论配图。
+Use $paper-operators to generate an art criticism illustration.
 
 Source anchor:
-好的审美不是装饰，而是把注意力放到正确的位置。
+Good taste is not decoration. It is placing attention in the right place.
 
-要求：
-- operator family 选 Frame Setter / Light Catcher
-- 画廊工作台、装框、光卡、色票、留白
-- 不要画成流程图、漏斗、节点网络
+Requirements:
+- operator family: Frame Setter / Light Catcher
+- gallery workbench, frame placement, light card, color swatches, quiet negative space
+- do not turn it into a flowchart, funnel, or node network
 ```
 
-更多单图示例见 [`examples/prompts.md`](examples/prompts.md)；多图串联系列（产品/AI、艺术评论、生活/心理）见 [`examples/series-prompts.md`](examples/series-prompts.md)。
+More single-image examples live in [`examples/prompts.md`](examples/prompts.md); multi-image chained series (product/AI, art criticism, life/psychology) live in [`examples/series-prompts.md`](examples/series-prompts.md).
 
-## 关注后续
+## Follow The Work
 
-这个仓库放的是可复用的 Skill 和示例。更完整的拆解、提示词、文章配图复盘、AI 写作和产品实践，我会继续写在公众号里。
+This repository contains the reusable Skill and examples. Longer breakdowns, prompt notes, article illustration reviews, AI writing practice, and product work will continue on my WeChat official account.
 
-如果你也关心这些问题：怎么让 AI 图不再像模板、怎么把文章里的判断画清楚、怎么把 Agent 工作流做成真正可复用的东西，欢迎关注「正在逐渐AI化」。
+If you care about making AI images less generic, making article judgment visible, and turning agent workflows into reusable systems, search for 「正在逐渐AI化」 on WeChat.
 
 <p align="center">
-  <img src="assets/wechat-official-account.png" alt="微信搜一搜：正在逐渐AI化" width="720">
+  <img src="assets/wechat-official-account.png" alt="WeChat search: 正在逐渐AI化" width="720">
 </p>
 
-## 仓库结构
+## Repository
 
 ```text
 paper-operators/
@@ -301,7 +345,7 @@ paper-operators/
     └── assets/examples/
 ```
 
-外层仓库给人读，也提供跨 Agent 的通用指令；内层 `paper-operators/` 是可以直接安装到 Codex 里的 Skill。
+The outer repository is for people reading the project and for portable agent instructions. The inner `paper-operators/` directory is the ready-to-install Codex Skill.
 
 ## License
 
