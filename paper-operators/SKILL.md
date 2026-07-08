@@ -14,21 +14,23 @@ Paper Operators turns an article idea into a tactile paper-stage illustration wh
 1. Read the article, excerpt, topic, or image-edit request.
 2. Identify one source anchor: the sentence, paragraph, claim, tension, turn, or feeling that deserves a visual.
 3. Read the user's real intent with `references/intent-reading.md`: who reads it, what they should feel, the author's stance, and the content-specific particulars that must appear. The image must fit THIS document, not the topic in general.
-4. Name the core relationship the image must show, using `references/relationship-grammar.md`: connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension. Choose the relationship before the operator; precision comes from rendering the exact relation, direction, condition, and state.
-5. Choose the domain and mood: art, culture, personal essay, business, product, engineering, education, psychology, finance, history, lifestyle, or another field.
-6. Choose the core action: pull, frame, reveal, block, tune, fold, sort, mend, weigh, arrange, carry, shelter, distill, balance, light, archive, or transform.
-7. Decide whether a Paper Operator is necessary using the inclusion test.
-8. Before locking the default metaphor, diverge with `references/creative-divergence.md`: sketch a few candidate worlds and converge on the one that fits this content most precisely — do not reflexively reuse route-table, gallery, or room.
-9. Select one operator family from `references/operator-library.md` that can physically perform the relationship; use the Operator × Relationship map when unsure.
-10. Choose the composition mode with `references/composition-modes.md`: one dense single-image-multi-beat composition (e.g. four river crossings on one terrain) vs a multi-image series — pick what the content's own structure demands, not a default.
-11. Assemble the scene from the kit in `references/primitives.md`, and encode status, degree, and state precisely with `references/state-coding.md`. Reuse the same primitive for the same meaning so the image stays consistent.
-12. Adapt the world, props, palette, texture, and typography using `references/domain-adaptation.md`.
-13. Write readable labels in the user's language. For simple Chinese figures, use 3-6 short labels; for complex multi-state figures, use more labels when they clarify paths, states, contrasts, or groups. Prefer short labels, but allow one readable sentence strip when it materially improves comprehension.
-14. Build the final image prompt using `references/prompt-template.md`.
-15. Generate or edit one image at a time.
-16. When the article needs more than one image, plan the set with `references/series-and-chaining.md` so the figures share a world, operator, palette, and a progressing throughline instead of reading as N unrelated pictures.
-17. Run QA with `references/qa-checklist.md`, and run the **Swap Test** from `references/variation-engine.md`: if the image could move onto a different article unnoticed, it is not precise enough. Regenerate if the operator is decorative, the style drifts, the relationship collapses into a generic arrow, the image feels template-locked, labels are missing, or the idea is unclear.
-18. For README, portfolio, or showcase images, include at least one non-engineering domain when possible: art, culture, life, psychology, education, food, travel, or personal essays. The skill should not look like it only draws workflows.
+4. Route the asset with `references/asset-routing-and-truth.md`: decide whether this is an article figure, story/book card, data story scene, center illustration for a card/slide, or reference-informed explainer. Record final container, display ratio, text ownership, exact truth constraints, and whether another tool should own the job.
+5. Name the core relationship the image must show, using `references/relationship-grammar.md`: connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension. Choose the relationship before the operator; precision comes from rendering the exact relation, direction, condition, and state.
+6. Choose the domain and mood: art, culture, personal essay, business, product, engineering, education, psychology, finance, history, lifestyle, or another field.
+7. Choose the core action: pull, frame, reveal, block, tune, fold, sort, mend, weigh, arrange, carry, shelter, distill, balance, light, archive, or transform.
+8. Decide whether a Paper Operator is necessary using the inclusion test.
+9. Before locking the default metaphor, diverge with `references/creative-divergence.md`: sketch a few candidate worlds and converge on the one that fits this content most precisely — do not reflexively reuse route-table, gallery, or room.
+10. Select one operator family from `references/operator-library.md` that can physically perform the relationship; use the Operator × Relationship map when unsure.
+11. Choose the composition mode with `references/composition-modes.md`: one dense single-image-multi-beat composition (e.g. four river crossings on one terrain) vs a multi-image series — pick what the content's own structure demands, not a default.
+12. Assemble the scene from the kit in `references/primitives.md`, and encode status, degree, and state precisely with `references/state-coding.md`. Reuse the same primitive for the same meaning so the image stays consistent.
+13. Adapt the world, props, palette, texture, and typography using `references/domain-adaptation.md`.
+14. Write readable labels in the user's language. For simple Chinese figures, use 3-6 short labels; for complex multi-state figures, use more labels when they clarify paths, states, contrasts, or groups. Prefer short labels, but allow one readable sentence strip when it materially improves comprehension.
+15. For exact labels, data, chart values, scientific parts, historical cues, brand cues, or proper names, put exact truth constraints into the final prompt. Do not let the image model invent numbers, categories, dates, axes, or reference-specific details.
+16. Build the final image prompt using `references/prompt-template.md`.
+17. Generate or edit one image at a time.
+18. When the article needs more than one image, plan the set with `references/series-and-chaining.md` so the figures share a world, operator, palette, and a progressing throughline instead of reading as N unrelated pictures.
+19. Run QA with `references/qa-checklist.md`, include the asset-routing checks from `references/asset-routing-and-truth.md`, and run the **Swap Test** from `references/variation-engine.md`: if the image could move onto a different article unnoticed, it is not precise enough. Regenerate if the operator is decorative, the style drifts, the relationship collapses into a generic arrow, the image feels template-locked, labels are missing, exact truth is wrong, or the idea is unclear.
+20. For README, portfolio, or showcase images, include at least one non-engineering domain when possible: art, culture, life, psychology, education, food, travel, or personal essays. The skill should not look like it only draws workflows.
 
 ## Inclusion Test
 
@@ -127,6 +129,10 @@ For planning, return:
 source anchor:
 reader takeaway:
 intent (audience · feeling · author stance · the one sentence to keep):
+asset role:
+final container and display ratio:
+text ownership:
+truth constraints and reference needs:
 domain and mood:
 relationship type:
 core action:
@@ -155,6 +161,7 @@ For generation, produce one image at a time and report:
 
 - `references/style-dna.md`: the visual identity and anti-copy rules.
 - `references/intent-reading.md`: read the user's real intent and the content-specific particulars so the image fits THIS document, not the topic in general.
+- `references/asset-routing-and-truth.md`: decide asset role, final container, text ownership, truth constraints, reference needs, and when another tool should own the job.
 - `references/relationship-grammar.md`: the 12 relationship families, their visual encoding, and how to render them precisely instead of as generic arrows.
 - `references/operator-library.md`: operator families, action verbs, and the Operator × Relationship map.
 - `references/creative-divergence.md`: diverge to several candidate metaphor worlds, then converge on the one that fits the content most precisely.
