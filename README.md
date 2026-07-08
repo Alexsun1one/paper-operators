@@ -29,8 +29,10 @@ More detail: [`docs/codex-workflow.md`](docs/codex-workflow.md).
 
 ## What This Skill Does
 
-- Finds the sentence, conflict, turn, plot beat, or judgment worth visualizing.
+- Finds the sentence, conflict, turn, plot beat, evidence point, or judgment worth visualizing.
+- Routes the asset before drawing: article figure, story/book card, data story, center illustration, or reference-informed explainer.
 - Converts abstract structure into physical paper action: reveal, route, weigh, frame, filter, repair, archive, or transform.
+- Preserves truth constraints for labels, data, scientific parts, historical cues, and reference-specific objects.
 - Chooses a paper-world metaphor that fits the domain: literature, culture, life, product, business, engineering, AI, education, psychology, and more.
 - Produces readable Chinese or English labels by default, instead of empty label boxes.
 - Keeps a consistent visual language across a whole package without making every image look the same.
@@ -62,6 +64,24 @@ Paper Operators is not limited to presentation graphics. It can compress a famil
 <p align="center">
   <img src="examples/images/readme/v2-cross-domain-grammar.jpg" alt="Same grammar, new world" width="100%">
   <br><sub><strong>Same grammar, new world.</strong> The same operator logic travels across art, business, life, and AI without collapsing into a single workflow template.</sub>
+</p>
+
+### Data Stories · Keep the numbers, show the implication
+
+Paper Operators can support data communication without pretending to be a strict chart renderer. The numbers stay exact; the operator action explains what needs attention.
+
+<p align="center">
+  <img src="examples/images/readme/v2-data-story-status-board.jpg" alt="Data story status board" width="100%">
+  <br><sub><strong>Data story scene.</strong> A sample status board preserves exact values while the operator turns risk into a review action: Open 12, At Risk 5, Blocked 2, Done 31.</sub>
+</p>
+
+### Reference-Informed Explainers · Recognizable, not copied
+
+For science, history, geography, artifacts, brands, and technical objects, Paper Operators can use stable reference cues so the image explains the real thing instead of hallucinating a generic symbol.
+
+<p align="center">
+  <img src="examples/images/readme/v2-reference-apollo-11.jpg" alt="Apollo 11 reference-informed explainer" width="100%">
+  <br><sub><strong>Apollo 11 as a reference-informed explainer.</strong> Saturn V, Columbia, Eagle, landing, and return become a tactile mission path with recognizable cues and no copied source image.</sub>
 </p>
 
 ### Series Control · One argument across many images
@@ -156,22 +176,28 @@ Avoid it when:
 
 ## How It Works
 
-1. Pick one source anchor from the article.
+1. Pick one source anchor from the article, story, data, report, or reference topic.
 2. Decide what the reader should understand after seeing the image.
-3. Name the core relationship the image must show — connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension — and choose it before the operator.
-4. Choose the domain and mood.
-5. Select a paper operator family that can physically perform the relationship.
-6. Answer `what breaks if removed`.
-7. Build the scene from the primitives kit, and encode status, degree, and state with state coding.
-8. Add readable labels in the user's language.
-9. When the piece needs several images, plan them as a connected series with one progressing throughline.
-10. Generate one image, then check clarity, action, text, composition, relationship precision, and style drift.
+3. Route the asset: article figure, story/book card, data story scene, center illustration, or reference-informed explainer.
+4. Name the core relationship the image must show — connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension — and choose it before the operator.
+5. Choose the domain and mood.
+6. Select a paper operator family that can physically perform the relationship.
+7. Answer `what breaks if removed`.
+8. Build the scene from the primitives kit, and encode status, degree, and state with state coding.
+9. Add readable labels with clear text ownership between image and outer layout.
+10. Preserve exact data, names, scientific parts, historical cues, or reference constraints when they matter.
+11. When the piece needs several images, plan them as a connected series with one progressing throughline.
+12. Generate one image, then check clarity, action, text, composition, truth constraints, relationship precision, and style drift.
 
 Planning output includes:
 
 ```text
 source anchor:
 reader takeaway:
+asset role:
+final container and display ratio:
+text ownership:
+truth constraints and reference needs:
 domain and mood:
 relationship type:
 core action:
@@ -184,15 +210,24 @@ composition:
 labels:
 series plan (only when planning more than one image):
 final image prompt:
+prompt record (for public/reusable assets):
 QA risks:
 ```
 
 ## Depth Layers
 
-This version extends Paper Operators from "draw one good image" to "render the exact relationship, and chain several images into one argument." Four layers, used in order:
+This version extends Paper Operators from "draw one good image" to "render the exact relationship, preserve truth constraints, and chain several images into one argument." Use these layers in order:
 
+- **Asset routing & truth** — [`paper-operators/references/asset-routing-and-truth.md`](paper-operators/references/asset-routing-and-truth.md)
+  Decide whether the job is an article figure, story/book card, data story scene, center illustration, or reference-informed explainer. Record final container, display ratio, text ownership, exact data/label/reference constraints, and whether another tool should own the job.
 - **Relationship grammar (relationship first)** — [`paper-operators/references/relationship-grammar.md`](paper-operators/references/relationship-grammar.md)
   Locate the one relationship the article actually needs among 12 families: connection, sequence & handoff, dependency, causality & trigger, feedback loop, contrast & opposition, tradeoff & balance, hierarchy & containment, transformation & state change, boundary/filter/threshold, divergence & convergence, and tension & equilibrium. Each comes with article signals, a visual encoding, the operator that performs it, and a precision ladder from "any old arrow" to "exact direction, condition, and state." Pick the relationship before the operator so the image never collapses into a generic arrow.
+- **Story cards** — [`paper-operators/references/story-card-grammar.md`](paper-operators/references/story-card-grammar.md)
+  For books, stories, biographies, and cases, identify protagonist, conflict, turning point, choice, consequence, and transformation. A story card must show change, not only atmosphere.
+- **Data stories** — [`paper-operators/references/data-story-scenes.md`](paper-operators/references/data-story-scenes.md)
+  For metrics, rankings, benchmark results, reports, and evidence summaries, keep exact labels and values while using the operator to show implication, triage, or decision.
+- **Reference-informed explainers** — [`paper-operators/references/reference-informed-explainers.md`](paper-operators/references/reference-informed-explainers.md)
+  For science, history, brands, artifacts, devices, species, places, or technical apparatus, gather stable factual/visual cues and translate them into the Paper Operators world without copying source images.
 - **Primitives kit (the parts you build from)** — [`paper-operators/references/primitives.md`](paper-operators/references/primitives.md)
   A reusable set of paper parts: carriers and paths, surfaces and holders, enclosures and boundaries, optics and light, measures and tools, state containers, label containers, and the paper-person construction kit. One primitive carries one meaning; reuse the same primitive for the same meaning so a set of images reads as one world.
 - **State coding (where precision comes from)** — [`paper-operators/references/state-coding.md`](paper-operators/references/state-coding.md)
@@ -200,7 +235,9 @@ This version extends Paper Operators from "draw one good image" to "render the e
 - **Series & chaining (connect images into one argument)** — [`paper-operators/references/series-and-chaining.md`](paper-operators/references/series-and-chaining.md)
   Most articles need 2–6 figures. Keep the operator, palette, and label style constant; run one blue throughline ribbon across the set with a progressing state (loose→taut, scattered→sorted, dim→lit, heavy→placed); plant a small motif early and pay it off in the closing image. Worked sets live in [`examples/series-prompts.md`](examples/series-prompts.md).
 
-The layers compose: pick the relationship, render it with primitives and state coding, and chain multiple images with a shared throughline.
+The layers compose: route the asset, pick the relationship, preserve the necessary truth, render it with primitives and state coding, and chain multiple images with a shared throughline.
+
+Supporting references cover production handoff and QA: [`text-strategy`](paper-operators/references/text-strategy.md), [`layout-handoff`](paper-operators/references/layout-handoff.md), [`prompt-records`](paper-operators/references/prompt-records.md), and [`failure-patterns`](paper-operators/references/failure-patterns.md). Public examples should keep prompt records when they teach reusable lessons; see [`examples/showcase-prompt-records.md`](examples/showcase-prompt-records.md).
 
 Two further v2 refinements:
 

@@ -15,22 +15,27 @@ Paper Operators turns an article idea into a tactile paper-stage illustration wh
 2. Identify one source anchor: the sentence, paragraph, claim, tension, turn, or feeling that deserves a visual.
 3. Read the user's real intent with `references/intent-reading.md`: who reads it, what they should feel, the author's stance, and the content-specific particulars that must appear. The image must fit THIS document, not the topic in general.
 4. Route the asset with `references/asset-routing-and-truth.md`: decide whether this is an article figure, story/book card, data story scene, center illustration for a card/slide, or reference-informed explainer. Record final container, display ratio, text ownership, exact truth constraints, and whether another tool should own the job.
-5. Name the core relationship the image must show, using `references/relationship-grammar.md`: connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension. Choose the relationship before the operator; precision comes from rendering the exact relation, direction, condition, and state.
-6. Choose the domain and mood: art, culture, personal essay, business, product, engineering, education, psychology, finance, history, lifestyle, or another field.
-7. Choose the core action: pull, frame, reveal, block, tune, fold, sort, mend, weigh, arrange, carry, shelter, distill, balance, light, archive, or transform.
-8. Decide whether a Paper Operator is necessary using the inclusion test.
-9. Before locking the default metaphor, diverge with `references/creative-divergence.md`: sketch a few candidate worlds and converge on the one that fits this content most precisely — do not reflexively reuse route-table, gallery, or room.
-10. Select one operator family from `references/operator-library.md` that can physically perform the relationship; use the Operator × Relationship map when unsure.
-11. Choose the composition mode with `references/composition-modes.md`: one dense single-image-multi-beat composition (e.g. four river crossings on one terrain) vs a multi-image series — pick what the content's own structure demands, not a default.
-12. Assemble the scene from the kit in `references/primitives.md`, and encode status, degree, and state precisely with `references/state-coding.md`. Reuse the same primitive for the same meaning so the image stays consistent.
-13. Adapt the world, props, palette, texture, and typography using `references/domain-adaptation.md`.
-14. Write readable labels in the user's language. For simple Chinese figures, use 3-6 short labels; for complex multi-state figures, use more labels when they clarify paths, states, contrasts, or groups. Prefer short labels, but allow one readable sentence strip when it materially improves comprehension.
-15. For exact labels, data, chart values, scientific parts, historical cues, brand cues, or proper names, put exact truth constraints into the final prompt. Do not let the image model invent numbers, categories, dates, axes, or reference-specific details.
-16. Build the final image prompt using `references/prompt-template.md`.
-17. Generate or edit one image at a time.
-18. When the article needs more than one image, plan the set with `references/series-and-chaining.md` so the figures share a world, operator, palette, and a progressing throughline instead of reading as N unrelated pictures.
-19. Run QA with `references/qa-checklist.md`, include the asset-routing checks from `references/asset-routing-and-truth.md`, and run the **Swap Test** from `references/variation-engine.md`: if the image could move onto a different article unnoticed, it is not precise enough. Regenerate if the operator is decorative, the style drifts, the relationship collapses into a generic arrow, the image feels template-locked, labels are missing, exact truth is wrong, or the idea is unclear.
-20. For README, portfolio, or showcase images, include at least one non-engineering domain when possible: art, culture, life, psychology, education, food, travel, or personal essays. The skill should not look like it only draws workflows.
+5. For stories, books, biographies, cases, or narrative explainers, read `references/story-card-grammar.md` and identify protagonist, conflict, turning point, choice, consequence, and transformation.
+6. For metrics, charts, rankings, benchmark results, project reports, or evidence summaries, read `references/data-story-scenes.md` and write the exact data contract before prompting.
+7. For scientific, historical, cultural, geographic, brand, model, artifact, species, or apparatus topics, read `references/reference-informed-explainers.md` and gather stable visual/factual cues before prompting when accuracy matters.
+8. Name the core relationship the image must show, using `references/relationship-grammar.md`: connection, sequence, dependency, causality, feedback, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension. Choose the relationship before the operator; precision comes from rendering the exact relation, direction, condition, and state.
+9. Choose the domain and mood: art, culture, personal essay, business, product, engineering, education, psychology, finance, history, lifestyle, or another field.
+10. Choose the core action: pull, frame, reveal, block, tune, fold, sort, mend, weigh, arrange, carry, shelter, distill, balance, light, archive, or transform.
+11. Decide whether a Paper Operator is necessary using the inclusion test.
+12. Before locking the default metaphor, diverge with `references/creative-divergence.md`: sketch a few candidate worlds and converge on the one that fits this content most precisely — do not reflexively reuse route-table, gallery, or room.
+13. Select one operator family from `references/operator-library.md` that can physically perform the relationship; use the Operator × Relationship map when unsure.
+14. Choose the composition mode with `references/composition-modes.md`: one dense single-image-multi-beat composition (e.g. four river crossings on one terrain) vs a multi-image series — pick what the content's own structure demands, not a default.
+15. Assemble the scene from the kit in `references/primitives.md`, and encode status, degree, and state precisely with `references/state-coding.md`. Reuse the same primitive for the same meaning so the image stays consistent.
+16. Adapt the world, props, palette, texture, and typography using `references/domain-adaptation.md`.
+17. Write readable labels with `references/text-strategy.md`. For simple figures, use 3-6 short labels; for story/book cards use 4-8 beat labels; for data scenes, include exact values only when readable. Prefer short labels, and move headline/explanation/citations outside the image when the outer layout should own them.
+18. For exact labels, data, chart values, scientific parts, historical cues, brand cues, or proper names, put exact truth constraints into the final prompt. Do not let the image model invent numbers, categories, dates, axes, or reference-specific details.
+19. For final artifacts that will enter README, social cards, slides, docs, or article packages, read `references/layout-handoff.md` and return caption, crop guidance, safe margin, and handoff owner.
+20. Build the final image prompt using `references/prompt-template.md`.
+21. Generate or edit one image at a time.
+22. When the article needs more than one image, plan the set with `references/series-and-chaining.md` so the figures share a world, operator, palette, and a progressing throughline instead of reading as N unrelated pictures.
+23. For public examples or reusable packages, record the source anchor, asset role, truth constraints, reference cues, final prompt, output path, rejected attempt reason, and QA result using `references/prompt-records.md`.
+24. Run QA with `references/qa-checklist.md`, include the asset-routing checks from `references/asset-routing-and-truth.md`, the failure scan from `references/failure-patterns.md`, and the **Swap Test** from `references/variation-engine.md`: if the image could move onto a different article unnoticed, it is not precise enough. Regenerate if the operator is decorative, the style drifts, the relationship collapses into a generic arrow, the image feels template-locked, labels are missing, exact truth is wrong, or the idea is unclear.
+25. For README, portfolio, or showcase images, include at least one non-engineering domain when possible: art, culture, life, psychology, education, food, travel, or personal essays. The skill should not look like it only draws workflows.
 
 ## Inclusion Test
 
@@ -133,6 +138,9 @@ asset role:
 final container and display ratio:
 text ownership:
 truth constraints and reference needs:
+story slots (if relevant):
+data contract (if relevant):
+layout handoff:
 domain and mood:
 relationship type:
 core action:
@@ -146,7 +154,8 @@ composition:
 labels (mandatory; 3-6 for simple figures, more when complex states/paths/groups need them; optional one-sentence strip if helpful):
 series plan (only when planning more than one image):
 final image prompt:
-QA risks (include the Swap Test):
+prompt record (for public/reusable assets):
+QA risks (include asset routing, failure patterns, and the Swap Test):
 ```
 
 For generation, produce one image at a time and report:
@@ -162,14 +171,21 @@ For generation, produce one image at a time and report:
 - `references/style-dna.md`: the visual identity and anti-copy rules.
 - `references/intent-reading.md`: read the user's real intent and the content-specific particulars so the image fits THIS document, not the topic in general.
 - `references/asset-routing-and-truth.md`: decide asset role, final container, text ownership, truth constraints, reference needs, and when another tool should own the job.
+- `references/story-card-grammar.md`: turn stories, books, biographies, and cases into cards with protagonist, conflict, choice, consequence, and transformation.
+- `references/data-story-scenes.md`: preserve exact numbers while turning metrics, charts, and evidence into paper scenes.
+- `references/reference-informed-explainers.md`: gather stable factual and visual cues for science, history, culture, brands, artifacts, and other visually specific topics.
 - `references/relationship-grammar.md`: the 12 relationship families, their visual encoding, and how to render them precisely instead of as generic arrows.
 - `references/operator-library.md`: operator families, action verbs, and the Operator × Relationship map.
 - `references/creative-divergence.md`: diverge to several candidate metaphor worlds, then converge on the one that fits the content most precisely.
 - `references/primitives.md`: the composable kit of atomic paper parts, label containers, and the paper-person construction kit.
 - `references/state-coding.md`: the precise visual encoding system for status, degree, and quality.
 - `references/domain-adaptation.md`: how to adapt paper operators to art, culture, life, business, technical, and other topics.
+- `references/text-strategy.md`: decide which text belongs inside the image, which belongs outside, and how to repair label failures.
+- `references/layout-handoff.md`: hand a generated image to README, social-card, slide, article, or knowledge-base layouts without stuffing the image with outer-layout text.
 - `references/composition-modes.md`: choose one dense single-image-multi-beat composition vs a series; single-image layouts for multi-step stories.
 - `references/series-and-chaining.md`: how to chain a set of images into one connected argument with a shared throughline.
 - `references/variation-engine.md`: defeat sameness through precision; semantic invariants vs content-driven variables; the Swap Test.
+- `references/prompt-records.md`: record public/reusable prompts, truth constraints, output paths, rejected attempts, and QA results.
+- `references/failure-patterns.md`: name and repair common failures such as decorative operators, fake data beauty, text overload, template lock, and wrong-owner tasks.
 - `references/prompt-template.md`: planning and final generation prompt templates.
 - `references/qa-checklist.md`: acceptance and regeneration rules.

@@ -8,9 +8,9 @@ This guide is plain Markdown on purpose. It does not depend on Codex Skill metad
 
 ## Mission
 
-Turn article ideas into clear, tactile, paper-stage illustrations.
+Turn essays, books, stories, systems, reports, and evidence into clear, tactile, paper-stage visual cards.
 
-The image should show a folded-paper operator physically performing the article's core conceptual action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, repairing, or transforming.
+The image should show a folded-paper operator physically performing the source's core conceptual action: framing, lighting, routing, inspecting, filtering, caring, weighing, archiving, repairing, or transforming.
 
 This is not a mascot style. The operator is useful only when the action helps the reader understand the idea.
 
@@ -25,9 +25,11 @@ Use English when the user writes English or explicitly asks for English output.
 1. Read the article, excerpt, topic, or image request.
 2. Pick one source anchor: a sentence, conflict, turn, claim, tension, or feeling worth visualizing.
 3. State the reader takeaway in one sentence.
-4. Choose the domain and mood: art, culture, life, product, business, engineering, AI, education, psychology, history, finance, or another field.
-5. Choose the core action: pull, frame, reveal, block, tune, fold, sort, mend, weigh, arrange, carry, shelter, distill, balance, light, archive, or transform.
-6. Run the inclusion test:
+4. Route the asset: article figure, story/book card, data story scene, center illustration, or reference-informed explainer. Decide final container, display ratio, text ownership, exact truth constraints, and whether another tool should own the job.
+5. For stories/books, identify protagonist, conflict, turning point, choice, consequence, and transformation. For data scenes, write exact labels and values before prompting. For scientific, historical, brand, artifact, or other visually specific topics, gather stable factual/visual cues before prompting.
+6. Choose the domain and mood: art, culture, life, product, business, engineering, AI, education, psychology, history, finance, or another field.
+7. Choose the core action: pull, frame, reveal, block, tune, fold, sort, mend, weigh, arrange, carry, shelter, distill, balance, light, archive, or transform.
+8. Run the inclusion test:
 
 ```text
 paper operator:
@@ -43,10 +45,11 @@ paper operator:
 - forbidden drift:
 ```
 
-7. Use a paper operator only if `what breaks if removed` is concrete.
-8. Build a high-angle paper-model scene with readable labels. When the piece needs more than one image, plan them as a connected series (see Depth Layers).
-9. Generate or plan one image at a time.
-10. Check the output against the QA rules below.
+9. Use a paper operator only if `what breaks if removed` is concrete.
+10. Build a high-angle paper-model scene with readable labels. Keep headlines, long explanations, citations, and platform-specific text outside the image unless the image truly owns them.
+11. When the piece needs more than one image, plan them as a connected series (see Depth Layers).
+12. Generate or plan one image at a time.
+13. Check the output against the QA rules below, including truth constraints and failure patterns.
 
 If the current agent cannot generate images, stop at the final image prompt and clearly say which image model or renderer should receive it.
 
@@ -78,9 +81,11 @@ Always let the article choose the operator's tool and world. Do not force engine
 
 ## Depth Layers
 
-Four ideas give the method its depth. The full reference files live in the repo, but the concepts travel on their own.
+These ideas give the method its depth. The full reference files live in the repo, but the concepts travel on their own.
 
+- **Asset routing and truth.** Decide whether this is an article figure, story/book card, data story scene, center illustration, or reference-informed explainer. Record final container, display ratio, text ownership, exact data/label/reference constraints, and whether another tool should own the job. (Full guide: `paper-operators/references/asset-routing-and-truth.md`.)
 - **Relationship first.** Before choosing an operator, name the exact relationship the image must show: connection, sequence, dependency, causality, feedback loop, contrast, tradeoff, hierarchy, transformation, boundary, divergence, or tension. Then render its direction, condition, and state. This is what stops an image from collapsing into a generic left-to-right arrow. (Full grammar: `paper-operators/references/relationship-grammar.md`.)
+- **Story cards, data stories, reference explainers.** For stories/books, show protagonist, conflict, choice, consequence, and transformation; for data, preserve exact values while showing implication; for science/history/brands/artifacts, gather stable cues before prompting. (Full guides: `story-card-grammar.md`, `data-story-scenes.md`, `reference-informed-explainers.md`.)
 - **Primitives as the kit.** Build every scene from a known set of paper parts — carriers and paths, surfaces and holders, enclosures and boundaries, optics and light, measures and tools, state containers, and label containers. One primitive carries one meaning; reuse the same primitive for the same meaning so a set of images feels like one world. (Full kit: `paper-operators/references/primitives.md`.)
 - **State coding for precision.** Show status, degree, and quality without extra text: color semantics, path thickness and texture, elevation, gate posture, edge condition, light, and degree. Keep an encoding budget — pick the one or two encodings that carry the point and let the rest stay neutral. (Full system: `paper-operators/references/state-coding.md`.)
 - **Series for chaining.** When an article needs several images, chain them into one argument: keep the operator, palette, and label style constant, advance one throughline ribbon across the set, and introduce a small motif early that pays off at the end. (Full guide: `paper-operators/references/series-and-chaining.md`; worked examples: `examples/series-prompts.md`.)
@@ -96,6 +101,10 @@ For planning, return:
 ```text
 source anchor:
 reader takeaway:
+asset role:
+final container and display ratio:
+text ownership:
+truth constraints and reference needs:
 domain and mood:
 core action:
 operator decision:
@@ -105,6 +114,7 @@ metaphor world:
 composition:
 labels:
 final image prompt:
+prompt record (for public/reusable assets):
 QA risks:
 ```
 
@@ -146,6 +156,8 @@ Regenerate or revise if:
 - Removing the operator would not weaken comprehension.
 - The image becomes a generic mascot, robot, stick figure, PPT chart, or stock infographic.
 - The labels are missing, unreadable, fake, or floating without objects.
+- Exact data, names, scientific parts, historical cues, or reference-specific objects are wrong or invented.
+- The image contains a title, paragraph, citation, or long legend that should belong to the outer layout.
 - The main path, state change, or reader takeaway is unclear.
 - The scene uses engineering props for a non-engineering article without a reason.
 - The image is charming but does not explain the source anchor.
